@@ -14,6 +14,6 @@ export const site = {
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
   ],
-  socials: { instagram: 'https://www.instagram.com/mukesh_chaudhari3995/' },
+  socials: { instagram: 'https://www.instagram.com/jayganeshfilmentpvtltd/' },
   credit: { name: 'YG Web Studio', url: 'https://ygwebstudio.vercel.app/' },
 };
