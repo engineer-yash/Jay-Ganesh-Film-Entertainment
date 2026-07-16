@@ -66,7 +66,7 @@ export const metadata = {
       'Premium dance classes in Pune featuring Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 2003.',
     images: [
       {
-        url: '/secondary.png',
+        url: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784214229/imageedit_8_5841324216_alvcav.png',
         width: 1200,
         height: 630,
         alt: 'Jay Ganesh Films Entertainment — Dance Studios in Pune',
@@ -79,7 +79,7 @@ export const metadata = {
     creator: '@mukesh_chaudhari3995',
     title: 'Jay Ganesh Films Entertainment',
     description: 'Premium dance studios, cinematic events & films — Pune.',
-    images: ['/secondary.png'],
+    images: ['https://res.cloudinary.com/dkinrfyq7/image/upload/v1784214229/imageedit_8_5841324216_alvcav.png'],
   },
   alternates: {
     canonical: 'https://jayganeshfilms.com',
