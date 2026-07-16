@@ -7,8 +7,8 @@ export const founder = {
     'For over two decades, Mukesh Chaudhari — known on stage as Rudra — has shaped the pulse of Indian dance culture. From winning national television stages to building a family of studios and cinematic events, his journey is a masterclass in passion, discipline and reinvention.',
   stats: [
     { number: '23+', label: 'Years of Experience' },
-    { number: '4', label: 'Studios' },
-    { number: '3', label: 'Signature Events' },
+    { number: '8+', label: 'Studios' },
+    { number: '3+', label: 'Signature Events' },
     { number: '10K+', label: 'Students Mentored' },
   ],
   timeline: [

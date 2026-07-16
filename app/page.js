@@ -11,13 +11,11 @@ import FAQ from '@/components/site/FAQ';
 import MarqueeBand from '@/components/site/MarqueeBand';
 import { Reveal, Stagger, StaggerItem, FloatingRing, FloatingBadge } from '@/components/site/Motion';
 import HeroClient from '@/components/site/HeroClient';
-import TrustBar from '@/components/site/TrustBar';
 
 export default function HomePage() {
   return (
     <>
       <HeroClient />
-      <TrustBar />
       <MarqueeBand />
 
       {/* FOUNDER PREVIEW */}
@@ -92,7 +90,7 @@ export default function HomePage() {
           <Reveal><div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-primary">Our Studios</div>
-              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Four homes. <span className="text-gradient-gold">One movement.</span></h2>
+              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">A home for every dancer. <span className="text-gradient-gold">One movement.</span></h2>
             </div>
             <Link href="/branches" className="inline-flex items-center gap-2 text-sm hover:text-primary transition">See all branches <ArrowRight className="h-4 w-4" /></Link>
           </div></Reveal>

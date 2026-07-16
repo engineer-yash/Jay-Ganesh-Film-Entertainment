@@ -13,7 +13,7 @@ export default function HeroClient() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
 
-  const words = ['Where', 'Dance,', 'Films &', 'Culture', 'come alive.'];
+  const words = ['Where', 'Dance,', 'Films &', 'Culture ', 'come alive.'];
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-24 overflow-hidden spotlight">
@@ -28,7 +28,7 @@ export default function HeroClient() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center py-20 relative">
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-primary">
-            <Sparkles className="h-3.5 w-3.5" /> Crafted since 1999
+            <Sparkles className="h-3.5 w-3.5" /> Crafted since 2003
           </motion.div>
 
           <h1 className="font-display mt-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
@@ -38,7 +38,7 @@ export default function HeroClient() {
                   initial={{ y: '110%', rotate: -6, opacity: 0 }}
                   animate={{ y: 0, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.85, delay: 0.15 + i * 0.12, ease: [0.2, 0.7, 0.2, 1] }}
-                  className={`inline-block ${(word === 'Dance,' || word === 'Culture') ? 'text-gradient-gold italic' : ''}`}
+                  className={`inline-block ${(word === 'Dance,' || word === 'Culture ') ? 'text-gradient-gold italic' : ''}`}
                 >
                   {word}
                 </motion.span>
@@ -47,7 +47,7 @@ export default function HeroClient() {
           </h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.9 }} className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Jay Ganesh Films Entertainment is a family of premium dance studios, cinematic events and cultural productions — helmed by national dance icon <span className="text-foreground font-medium">Mukesh (Rudra) Chaudhari</span>.
+            Jay Ganesh Films Entertainment is a family of premium dance studios, cinematic events and cultural productions — started by national dance icon <span className="text-foreground font-medium">Mukesh (Rudra) Chaudhari</span>.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.05 }} className="mt-10 flex flex-wrap gap-4">
@@ -79,10 +79,10 @@ export default function HeroClient() {
             </div>
           </motion.div>
           <motion.div animate={{ y: [0, -14, 0], rotate: [6, 8, 6] }} transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }} className="hidden md:block absolute -top-6 -right-2 rounded-2xl overflow-hidden ring-1 ring-border w-40 aspect-[3/4] shadow-xl">
-            <Image src="/images/tandav.jpg" alt="Tandav" fill className="object-cover" />
+            <Image src="/images/tandav/tandav.jpg" alt="Tandav" fill className="object-cover" />
           </motion.div>
           <motion.div animate={{ y: [0, 14, 0], rotate: [-6, -8, -6] }} transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }} className="hidden md:block absolute -bottom-8 -left-6 rounded-2xl overflow-hidden ring-1 ring-border w-44 aspect-[3/4] shadow-xl">
-            <Image src="/images/shubh-garba.jpg" alt="Shubh Garba" fill className="object-cover" />
+            <Image src="/images/shubh-garba/shubh-garba.jpg" alt="Shubh Garba" fill className="object-cover" />
           </motion.div>
         </div>
       </div>

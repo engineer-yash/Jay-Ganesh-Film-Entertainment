@@ -27,15 +27,19 @@ export default function Navbar() {
       scrolled ? 'backdrop-blur-xl bg-background/70 border-b border-border/60' : 'bg-transparent'
     )}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden ring-2 ring-primary/40 group-hover:ring-primary transition">
-            <Image src={site.logo} alt="Jay Ganesh Films logo" fill className="object-cover" />
-          </div>
-          <div className="leading-tight hidden sm:block">
-            <div className="font-display text-lg md:text-xl tracking-wide text-gradient-gold">Jay Ganesh Films</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Entertainment Pvt. Ltd.</div>
-          </div>
-        </Link>
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+  <div className="relative h-10 w-10 md:h-12 md:w-12 shrink-0 rounded-full overflow-hidden ring-2 ring-primary/40 group-hover:ring-primary transition">
+    <Image src={site.logo} alt="Jay Ganesh Films logo" fill className="object-cover" />
+  </div>
+  <div className="leading-tight min-w-0">
+    <div className="font-display text-sm sm:text-lg md:text-xl tracking-wide text-gradient-gold truncate">
+      Jay Ganesh Films
+    </div>
+    <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-muted-foreground truncate">
+      Entertainment Pvt. Ltd.
+    </div>
+  </div>
+</Link>
 
         <nav className="hidden lg:flex items-center gap-1">
           {site.nav.map((n) => {
