@@ -27,7 +27,7 @@ export const metadata = {
     template: '%s | Jay Ganesh Films Entertainment',
   },
   description:
-    'Premium dance studios in Hinjewadi, Punawale & Tathawade, Pune. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Home of Tandav, Shubh Garba & Glamour Gateway — founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 1999.',
+    'Premium dance studios in Hinjewadi, Punawale & Tathawade, Pune. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Home of Tandav, Shubh Garba & Glamour Gateway — founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 2003.',
   applicationName: 'Jay Ganesh Films Entertainment',
   authors: [{ name: 'Mukesh (Rudra) Chaudhari', url: 'https://www.instagram.com/mukesh_chaudhari3995/' }],
   creator: 'Jay Ganesh Films Entertainment Pvt. Ltd.',
@@ -63,10 +63,10 @@ export const metadata = {
     siteName: 'Jay Ganesh Films Entertainment',
     title: 'Jay Ganesh Films Entertainment — Dance. Films. Culture.',
     description:
-      'Four premium dance studios across Pune, three signature events, one cinematic banner. Crafted since 1999 by Mukesh (Rudra) Chaudhari.',
+      'Premium dance classes in Pune featuring Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 2003.',
     images: [
       {
-        url: '/images/secondary.png',
+        url: '/secondary.png',
         width: 1200,
         height: 630,
         alt: 'Jay Ganesh Films Entertainment — Dance Studios in Pune',
@@ -79,7 +79,7 @@ export const metadata = {
     creator: '@mukesh_chaudhari3995',
     title: 'Jay Ganesh Films Entertainment',
     description: 'Premium dance studios, cinematic events & films — Pune.',
-    images: ['/images/secondary.png'],
+    images: ['/secondary.png'],
   },
   alternates: {
     canonical: 'https://jayganeshfilms.com',
@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
                   alternateName: 'Jay Ganesh Films',
                   url: 'https://jayganeshfilms.com',
                   logo: 'https://jayganeshfilms.com/images/logo.png',
-                  foundingDate: '1999',
+                  foundingDate: '2003',
                   founder: {
                     '@type': 'Person',
                     name: 'Mukesh (Rudra) Chaudhari',

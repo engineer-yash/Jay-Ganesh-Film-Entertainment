@@ -46,7 +46,7 @@ export default function FounderPage() {
               <Image src={founder.image} alt={founder.name} fill priority className="object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Since 1999</div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Since 2003</div>
                 <div className="font-display text-3xl mt-1">A movement, not a moment.</div>
               </div>
             </div>

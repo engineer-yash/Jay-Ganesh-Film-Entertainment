@@ -6,7 +6,7 @@ import { ArrowRight, MapPin, Phone, Instagram } from 'lucide-react';
 export const metadata = {
   title: 'Our Studios — 4 Dance Branches Across Pune',
   description:
-    'Explore our four dance studios in Pune — Hinjewadi Phase 1, Punawale (Latitude Mall), Grand Highstreet (Shubh Dance Company) and Tathawade. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance and more.',
+    'Explore our dance studios in Pune — Hinjewadi Phase 1, Punawale (Latitude Mall), Grand Highstreet (Shubh Dance Company) and Tathawade. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance and more.',
   keywords: ['dance studio Pune', 'dance classes Hinjewadi', 'dance classes Punawale', 'dance classes Tathawade', 'Shubh Dance Company'],
   alternates: { canonical: '/branches' },
   openGraph: {

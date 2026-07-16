@@ -1,7 +1,7 @@
 export const site = {
   brand: 'Jay Ganesh Films Entertainment',
   short: 'Jay Ganesh Films',
-  tagline: 'Dance. Films. Culture. Crafted since 1999.',
+  tagline: 'Dance. Films. Culture. Crafted since 2003.',
   legal: 'Jay Ganesh Films Entertainment Pvt. Ltd.',
   logo: '/images/logo.png',
   url: 'https://jayganeshfilms.com',
