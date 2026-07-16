@@ -11,11 +11,13 @@ import FAQ from '@/components/site/FAQ';
 import MarqueeBand from '@/components/site/MarqueeBand';
 import { Reveal, Stagger, StaggerItem, FloatingRing, FloatingBadge } from '@/components/site/Motion';
 import HeroClient from '@/components/site/HeroClient';
+import TrustBar from '@/components/site/TrustBar';
 
 export default function HomePage() {
   return (
     <>
       <HeroClient />
+      <TrustBar />
       <MarqueeBand />
 
       {/* FOUNDER PREVIEW */}
@@ -49,7 +51,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-      
+
       {/* ABOUT PREVIEW */}
       {/* <section className="py-24 md:py-32 relative">
         <FloatingRing className="absolute top-10 right-10 opacity-30 hidden lg:block" size={280} />
