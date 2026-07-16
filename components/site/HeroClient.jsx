@@ -63,10 +63,10 @@ export default function HeroClient() {
             </div>
           </motion.div>
           <motion.div animate={{ y: [0, -14, 0], rotate: [6, 8, 6] }} transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }} className="hidden md:block absolute -top-6 -right-2 rounded-2xl overflow-hidden ring-1 ring-border w-40 aspect-[3/4] shadow-xl">
-            <Image src="/images/tandav.jpg" alt="Tandav" fill className="object-cover" />
+            <Image src="/images/tandav/tandav.jpg" alt="Tandav" fill className="object-cover" />
           </motion.div>
           <motion.div animate={{ y: [0, 14, 0], rotate: [-6, -8, -6] }} transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }} className="hidden md:block absolute -bottom-8 -left-6 rounded-2xl overflow-hidden ring-1 ring-border w-44 aspect-[3/4] shadow-xl">
-            <Image src="/images/shubh-garba.jpg" alt="Shubh Garba" fill className="object-cover" />
+            <Image src="/images/shubh-garba/shubh-garba.jpg" alt="Shubh Garba" fill className="object-cover" />
           </motion.div>
         </div>
       </div>
