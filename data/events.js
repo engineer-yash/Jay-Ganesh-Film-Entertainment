@@ -1,0 +1,55 @@
+export const events = [
+  {
+    slug: 'tandav',
+    name: 'Tandav Dance Competition',
+    tagline: 'The battleground of India’s finest movers.',
+    since: 'Since 2006',
+    instagram: 'https://www.instagram.com/tandav2006/',
+    image: '/images/tandav/tandav.jpg',
+    accent: 'from-red-500 via-rose-600 to-purple-700',
+    about: 'Tandav is our flagship dance competition — a high-voltage battleground where solo warriors and elite crews collide. Since 2006, Tandav has crowned some of Pune’s most exciting dance talent and remains a rite of passage in the local circuit.',
+    highlights: ['Solo & Group Categories', 'Cash Prizes', 'Celebrity Judges', 'Live Audience'],
+    gallery: ['/images/tandav/tandav.jpg','/images/tandav/poster-1.png','/images/tandav/poster-2.png','/images/tandav/poster-3.png'],
+    faqs: [
+      { q: 'Who can register?', a: 'Anyone 8+ years old — solo dancers, duos and crews (up to 15).' },
+      { q: 'What is the registration process?', a: 'Register via our Instagram DM or the contact form. Auditions are held before the main event.' },
+      { q: 'Are there cash prizes?', a: 'Yes — winners across categories receive cash prizes, trophies and choreography opportunities.' },
+    ],
+  },
+  {
+    slug: 'shubh-garba',
+    name: 'Shubh Garba Raas Dandiya',
+    tagline: 'Nine nights. One unforgettable celebration.',
+    since: 'Annual Navratri Event',
+    instagram: 'https://www.instagram.com/shubhgarbaraas2025/',
+    image: '/images/shubh-garba/shubh-garba.jpg',
+    accent: 'from-amber-400 via-orange-500 to-rose-600',
+    about: 'Shubh Garba Raas Dandiya is Pune’s most colourful Navratri celebration — nine nights of high-energy garba, dandiya, live dhol, showstopper costumes and a family-friendly community atmosphere.',
+    highlights: ['Live Dhol & Music', 'Best Dresser Prizes', 'Family Zone', 'Food & Bazaar'],
+    gallery: ['/images/shubh-garba/shubh-garba.jpg','/images/shubh-garba/poster-1.jpg','/images/shubh-garba/poster-2.jpg','/images/shubh-garba/poster-3.jpg'],
+    faqs: [
+      { q: 'When is the next edition?', a: 'Navratri 2025 — dates announced on our Instagram.' },
+      { q: 'Do I need to book passes in advance?', a: 'Yes, early-bird passes are highly recommended — the event sells out every year.' },
+      { q: 'Is there a dress code?', a: 'Traditional Navratri attire is encouraged. Best-dressed contests every night!' },
+    ],
+  },
+  {
+    slug: 'glamour-gateway',
+    name: 'Glamour Gateway',
+    tagline: 'Where fashion meets the runway of dreams.',
+    since: 'Signature Fashion Event',
+    instagram: 'https://www.instagram.com/glamourgatewayfashion007/',
+    image: '/images/glamour/event-1.jpg',
+    accent: 'from-fuchsia-500 via-pink-600 to-red-600',
+    about: 'Glamour Gateway is our signature fashion showcase — blending runway, cinema and dance into one unforgettable spectacle. It’s where emerging models, designers and choreographers debut on a red-carpet stage.',
+    highlights: ['Designer Showcase', 'Live Music', 'Model Auditions', 'Photography Coverage'],
+    gallery: ['/images/glamour/event-1.jpg','/images/glamour/poster-1.png','/images/glamour/poster-2.png','/images/glamour/guest-star-1.png','/images/glamour/guest-star-2.png','/images/glamour/guest-star-3.png','/images/glamour/guest-star-4.png'],
+    faqs: [
+      { q: 'How can models participate?', a: 'Submit your portfolio via Instagram DM. Auditions are announced 6 weeks before each edition.' },
+      { q: 'Can designers apply?', a: 'Yes. We onboard 8–12 designers per edition — apply via our contact page.' },
+      { q: 'Is media coverage available?', a: 'Every edition is professionally photographed and filmed. Coverage is shared with participants.' },
+    ],
+  },
+];
+
+export const getEvent = (slug) => events.find((e) => e.slug === slug);
