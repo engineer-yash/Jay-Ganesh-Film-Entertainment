@@ -7,9 +7,8 @@ export const site = {
   url: 'https://jayganeshfilms.com',
   nav: [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/branches', label: 'Branches' },
     { href: '/founder', label: 'Founder' },
+    { href: '/branches', label: 'Branches' },
     { href: '/events', label: 'Events' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },

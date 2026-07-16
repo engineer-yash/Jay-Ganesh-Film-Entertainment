@@ -18,8 +18,40 @@ export default function HomePage() {
       <HeroClient />
       <MarqueeBand />
 
+      {/* FOUNDER PREVIEW */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6">
+            <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">The Founder</div></Reveal>
+            <Reveal delay={0.1}><h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Mukesh <span className="text-gradient-gold">(Rudra)</span> Chaudhari</h2></Reveal>
+            <Reveal delay={0.2}><p className="mt-6 text-muted-foreground text-lg leading-relaxed">{founder.intro}</p></Reveal>
+            <Stagger className="mt-8 grid sm:grid-cols-2 gap-3">
+              {founder.knownFor.slice(0,4).map((k)=>(
+                <StaggerItem key={k} className="flex items-start gap-2 text-sm"><Star className="h-4 w-4 mt-0.5 text-primary" /> {k}</StaggerItem>
+              ))}
+            </Stagger>
+            <Reveal delay={0.4}><Link href="/founder" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">Explore his journey <ArrowRight className="h-4 w-4" /></Link></Reveal>
+          </div>
+          <Reveal className="lg:col-span-6" y={60}>
+            <div className="relative aspect-square rounded-3xl overflow-hidden ring-1 ring-border">
+              <Image src="/images/founder.jpg" alt="Mukesh Rudra Chaudhari" fill className="object-cover object-top" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Founder</div>
+                  <div className="font-display text-2xl">23+ Years of Craft</div>
+                </div>
+                <a href={founder.instagram} target="_blank" rel="noreferrer" className="h-11 w-11 rounded-full flex items-center justify-center bg-primary text-primary-foreground">
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      
       {/* ABOUT PREVIEW */}
-      <section className="py-24 md:py-32 relative">
+      {/* <section className="py-24 md:py-32 relative">
         <FloatingRing className="absolute top-10 right-10 opacity-30 hidden lg:block" size={280} />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-5 order-2 lg:order-1" y={60}>
@@ -50,7 +82,7 @@ export default function HomePage() {
             <Reveal delay={0.3}><Link href="/about" className="mt-8 inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">Read the full story <ArrowRight className="h-4 w-4" /></Link></Reveal>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* BRANCHES */}
       <section className="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
@@ -85,38 +117,6 @@ export default function HomePage() {
 
       <Reels />
       <MarqueeBand reverse />
-
-      {/* FOUNDER PREVIEW */}
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6">
-            <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">The Founder</div></Reveal>
-            <Reveal delay={0.1}><h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Mukesh <span className="text-gradient-gold">(Rudra)</span> Chaudhari</h2></Reveal>
-            <Reveal delay={0.2}><p className="mt-6 text-muted-foreground text-lg leading-relaxed">{founder.intro}</p></Reveal>
-            <Stagger className="mt-8 grid sm:grid-cols-2 gap-3">
-              {founder.knownFor.slice(0,4).map((k)=>(
-                <StaggerItem key={k} className="flex items-start gap-2 text-sm"><Star className="h-4 w-4 mt-0.5 text-primary" /> {k}</StaggerItem>
-              ))}
-            </Stagger>
-            <Reveal delay={0.4}><Link href="/founder" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">Explore his journey <ArrowRight className="h-4 w-4" /></Link></Reveal>
-          </div>
-          <Reveal className="lg:col-span-6" y={60}>
-            <div className="relative aspect-square rounded-3xl overflow-hidden ring-1 ring-border">
-              <Image src="/images/founder.jpg" alt="Mukesh Rudra Chaudhari" fill className="object-cover object-top" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Founder</div>
-                  <div className="font-display text-2xl">23+ Years of Craft</div>
-                </div>
-                <a href={founder.instagram} target="_blank" rel="noreferrer" className="h-11 w-11 rounded-full flex items-center justify-center bg-primary text-primary-foreground">
-                  <Instagram className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* EVENTS */}
       <section className="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
