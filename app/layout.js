@@ -27,7 +27,7 @@ export const metadata = {
     template: '%s | Jay Ganesh Films Entertainment',
   },
   description:
-    'Premium dance studios in Hinjewadi, Punawale & Tathawade, Pune. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Home of Tandav, Shubh Garba & Glamour Gateway — founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 2003.',
+    'Premium dance studios in Hinjewadi, Punawale & Tathawade, Pune. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Home of Tandav, Shubh Garba & Glamour Gateway — founded by Mukesh (Rudra) Chaudhari since 2003.',
   applicationName: 'Jay Ganesh Films Entertainment',
   authors: [{ name: 'Mukesh (Rudra) Chaudhari', url: 'https://www.instagram.com/mukesh_chaudhari3995/' }],
   creator: 'Jay Ganesh Films Entertainment Pvt. Ltd.',
@@ -63,7 +63,7 @@ export const metadata = {
     siteName: 'Jay Ganesh Films Entertainment',
     title: 'Jay Ganesh Films Entertainment — Dance. Films. Culture.',
     description:
-      'Premium dance classes in Pune featuring Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Founded by Boogie Woogie winner Mukesh (Rudra) Chaudhari since 2003.',
+      'Premium dance classes in Pune featuring Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance & more. Founded by Mukesh (Rudra) Chaudhari since 2003.',
     images: [
       {
         url: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784214229/imageedit_8_5841324216_alvcav.png',
