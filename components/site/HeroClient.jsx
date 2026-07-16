@@ -73,7 +73,7 @@ export default function HeroClient() {
           <motion.div initial={{ opacity: 0, scale: 0.9, rotate: -3 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 1, delay: 0.3 }} whileHover={{ rotate: 2, scale: 1.02 }} className="relative aspect-[3/4] max-w-md mx-auto rounded-3xl overflow-hidden ring-1 ring-border shadow-2xl shadow-primary/10">
             <Image src="/images/hinjewadi-poster-1.jpg" alt="My Style Dance Studio" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
+            <div className="absolute bottom-6 right-6 text-right max-w-xs">
               <div className="text-xs uppercase tracking-[0.3em] text-primary">Now enrolling</div>
               <div className="font-display text-2xl mt-1">Hinjewadi Flagship Studio</div>
             </div>
