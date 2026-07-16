@@ -9,8 +9,11 @@ import Breadcrumbs from '@/components/site/Breadcrumbs';
 import { Reveal, Stagger, StaggerItem, FloatingRing } from '@/components/site/Motion';
 
 export const metadata = {
-  title: 'Mukesh (Rudra) Chaudhari — Founder',
-  description: 'The 23-year journey of Mukesh (Rudra) Chaudhari — Boogie Woogie Winner, choreographer, mentor, film producer and founder of Jay Ganesh Films Entertainment.',
+  title: 'Mukesh (Rudra) Chaudhari — Founder, Choreographer & Boogie Woogie Winner',
+  description:
+    'The 23-year journey of Mukesh (Rudra) Chaudhari — Boogie Woogie winner, national-level choreographer, mentor, film producer and founder of Jay Ganesh Films Entertainment.',
+  keywords: ['Mukesh Chaudhari', 'Mukesh Rudra Chaudhari', 'Boogie Woogie winner', 'choreographer Pune', 'dance mentor Pune'],
+  alternates: { canonical: '/founder' },
 };
 
 export default function FounderPage() {

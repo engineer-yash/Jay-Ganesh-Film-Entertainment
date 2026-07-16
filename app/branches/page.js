@@ -4,8 +4,17 @@ import { branches } from '@/data/branches';
 import { ArrowRight, MapPin, Phone, Instagram } from 'lucide-react';
 
 export const metadata = {
-  title: 'Our Studios — Branches Across Pune',
-  description: 'Four premium dance studios across Pune under Jay Ganesh Films Entertainment: Hinjewadi, Punawale, Shubh Dance Company and Tathawade.',
+  title: 'Our Studios — 4 Dance Branches Across Pune',
+  description:
+    'Explore our four dance studios in Pune — Hinjewadi Phase 1, Punawale (Latitude Mall), Grand Highstreet (Shubh Dance Company) and Tathawade. Bollywood, Hip-Hop, Kathak, Zumba, Kids Dance and more.',
+  keywords: ['dance studio Pune', 'dance classes Hinjewadi', 'dance classes Punawale', 'dance classes Tathawade', 'Shubh Dance Company'],
+  alternates: { canonical: '/branches' },
+  openGraph: {
+    title: 'Our Dance Studios in Pune',
+    description: 'Four premium dance studios. One philosophy.',
+    url: '/branches',
+    images: ['/images/my-style-studio.jpg'],
+  },
 };
 
 export default function BranchesPage() {

@@ -12,12 +12,32 @@ export function generateStaticParams() {
 }
 
 // Dynamic SEO metadata per branch
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const b = getBranch(params.slug);
   if (!b) return { title: 'Branch not found' };
+
+  const title = `${b.name} — ${b.tag} | Dance Classes in ${b.tag.split(' ')[0]}, Pune`;
+  const description = `${b.tagline}. ${b.address}. Classes: ${b.classes?.join(', ')}. ${b.phone ? 'Call +91 ' + b.phone + '.' : ''}`;
+
   return {
-    title: `${b.name} — ${b.tag} | Jay Ganesh Films`,
-    description: b.tagline,
+    title,
+    description,
+    keywords: [
+      `${b.name}`,
+      `dance classes ${b.tag}`,
+      `dance studio ${b.tag}`,
+      ...(b.classes || []).map((c) => `${c} classes ${b.tag} Pune`),
+      'dance academy Pune',
+    ],
+    alternates: { canonical: `/branches/${b.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/branches/${b.slug}`,
+      images: [{ url: b.poster || b.image, width: 1200, height: 630, alt: b.name }],
+      type: 'website',
+    },
+    twitter: { card: 'summary_large_image', title, description, images: [b.poster || b.image] },
   };
 }
 
@@ -27,6 +47,39 @@ export default function BranchDetailPage({ params }) {
 
   return (
     <div className="pt-32 pb-24">
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'DanceSchool'],
+      '@id': `https://jayganeshfilms.com/branches/${b.slug}#business`,
+      name: `${b.name} — ${b.tag}`,
+      image: `https://jayganeshfilms.com${b.image}`,
+      url: `https://jayganeshfilms.com/branches/${b.slug}`,
+      telephone: b.phone ? `+91${b.phone}` : undefined,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: b.address,
+        addressLocality: 'Pune',
+        addressRegion: 'Maharashtra',
+        postalCode: b.slug === 'hinjewadi' ? '411057' : '411057',
+        addressCountry: 'IN',
+      },
+      sameAs: [b.instagram].filter(Boolean),
+      hasMap: b.maps,
+      priceRange: '₹₹',
+      openingHoursSpecification: [{
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+        opens: '07:00', closes: '22:00',
+      }],
+      makesOffer: (b.classes || []).map((c) => ({
+        '@type': 'Offer', itemOffered: { '@type': 'Service', name: `${c} Classes` },
+      })),
+    }),
+  }}
+/>
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Back link */}
         <Link

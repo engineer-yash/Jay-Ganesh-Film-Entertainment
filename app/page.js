@@ -12,6 +12,13 @@ import MarqueeBand from '@/components/site/MarqueeBand';
 import { Reveal, Stagger, StaggerItem, FloatingRing, FloatingBadge } from '@/components/site/Motion';
 import HeroClient from '@/components/site/HeroClient';
 
+export const metadata = {
+  title: 'Dance Studios in Pune | Bollywood, Hip-Hop, Kathak Classes — Jay Ganesh Films',
+  description:
+    'Top-rated dance academy in Pune with 4 branches — Hinjewadi, Punawale, Grand Highstreet & Tathawade. Bollywood, Hip-Hop, Zumba, Kathak, Kids Dance. Founded by Boogie Woogie winner Mukesh Chaudhari.',
+  alternates: { canonical: '/' },
+};
+
 export default function HomePage() {
   return (
     <>

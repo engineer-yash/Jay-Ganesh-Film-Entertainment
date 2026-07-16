@@ -7,8 +7,11 @@ import MarqueeBand from '@/components/site/MarqueeBand';
 import { Reveal, Stagger, StaggerItem } from '@/components/site/Motion';
 
 export const metadata = {
-  title: 'Signature Events',
-  description: 'Tandav Dance Competition, Shubh Garba Raas Dandiya and Glamour Gateway — three unforgettable stages by Jay Ganesh Films Entertainment.',
+  title: 'Tandav Dance Competition, Shubh Garba & Glamour Gateway | Signature Events',
+  description:
+    'Three unforgettable stages by Jay Ganesh Films Entertainment — Tandav Dance Competition, Shubh Garba Raas Dandiya (Pune Navratri) and Glamour Gateway fashion showcase.',
+  keywords: ['Tandav Dance Competition', 'Shubh Garba Pune', 'Raas Dandiya Pune', 'Glamour Gateway', 'Navratri Pune 2026', 'dance competition Pune'],
+  alternates: { canonical: '/events' },
 };
 
 export default function EventsPage() {
