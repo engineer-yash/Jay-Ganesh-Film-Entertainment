@@ -80,8 +80,6 @@ export default function FounderPage() {
         </Stagger>
       </section>
 
-      <Reels />
-
       {/* TIMELINE */}
       <section className="mt-8 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">Timeline</div></Reveal>

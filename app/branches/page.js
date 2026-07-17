@@ -30,6 +30,7 @@ export default function BranchesPage() {
         <div className="mt-16 grid md:grid-cols-2 gap-6">
           {branches.map((b, i) => (
             <div key={b.slug} className="group relative overflow-hidden rounded-3xl border border-border bg-card/40 hover-lift">
+              <Link href={`/branches/${b.slug}`} >
               <div className="relative aspect-[16/10]">
                 <Image src={b.image} alt={b.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className={`absolute inset-0 bg-gradient-to-br ${b.accent} opacity-25 group-hover:opacity-45 transition`} />
@@ -40,6 +41,7 @@ export default function BranchesPage() {
                   <div className="font-display text-3xl mt-1">{b.name}</div>
                 </div>
               </div>
+              </Link>
               <div className="p-6">
                 <div className="text-sm text-muted-foreground italic">{b.tagline}</div>
                 <div className="mt-4 flex items-start gap-2 text-sm">

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Trophy, Users, Film, Star, Instagram, MapPin } from 'lucide-react';
+import { ArrowRight, Sparkles, Trophy, Users, Film, Star, Instagram, MapPin, Youtube } from 'lucide-react';
 import { branches } from '@/data/branches';
+import { site } from '@/data/site';
 import { events } from '@/data/events';
 import { founder } from '@/data/founder';
 import { faqs } from '@/data/faqs';
@@ -11,6 +12,7 @@ import FAQ from '@/components/site/FAQ';
 import MarqueeBand from '@/components/site/MarqueeBand';
 import { Reveal, Stagger, StaggerItem, FloatingRing, FloatingBadge } from '@/components/site/Motion';
 import HeroClient from '@/components/site/HeroClient';
+
 
 export const metadata = {
   title: 'Dance Studios in Pune | Bollywood, Hip-Hop, Kathak Classes — Jay Ganesh Films',
@@ -150,6 +152,48 @@ export default function HomePage() {
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      {/* YOUTUBE */}
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+              <div>
+                <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
+                  <Youtube className="h-3.5 w-3.5" /> YouTube
+                </div>
+                <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">
+                  Watch us on <span className="text-gradient-gold">YouTube.</span>
+                </h2>
+                <p className="mt-3 text-muted-foreground max-w-xl">
+                  Performances, behind-the-scenes and full stage productions — all in one place.
+                </p>
+              </div>
+              <a
+                href={site.socials.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 self-start md:self-auto rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.25em] bg-red-600 text-white hover:bg-red-700 transition-colors"
+              >
+                <Youtube className="h-4 w-4" /> Subscribe Now
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="rounded-3xl overflow-hidden ring-1 ring-border bg-card/40">
+              <iframe
+                src="https://widgets.sociablekit.com/youtube-channel-videos/iframe/25697977"
+                frameBorder="0"
+                width="100%"
+                height="1000"
+                title="Jay Ganesh Films YouTube"
+                className="block w-full"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

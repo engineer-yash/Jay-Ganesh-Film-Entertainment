@@ -13,6 +13,11 @@ export const site = {
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
   ],
-  socials: { instagram: 'https://www.instagram.com/jayganeshfilmentpvtltd/' },
+  socials: {
+    instagram: 'https://www.instagram.com/jayganeshfilmentpvtltd/',
+    youtube: 'https://www.youtube.com/@jayganeshfilmsentpvtltd',
+    facebook: 'https://www.facebook.com/hinjawadicimpny',
+    whatsapp: 'https://wa.me/919923951535',
+  },
   credit: { name: 'YG Web Studio', url: 'https://ygwebstudio.vercel.app/' },
 };

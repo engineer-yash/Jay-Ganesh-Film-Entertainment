@@ -36,7 +36,7 @@ export default function ContactPage() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-primary" /> <a href="tel:+919923951535" className="hover:text-primary">+91 99239 51535</a></div>
               <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-primary" /> <a href="tel:+918149663995" className="hover:text-primary">+91 81496 63995</a></div>
-              <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <a href="mailto:hello@jayganeshfilms.com" className="hover:text-primary">hello@jayganeshfilms.com</a></div>
+              <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <a href="mailto:mukeshchaudhari106@gmail.com" className="hover:text-primary">mukeshchaudhari106@gmail.com</a></div>
               <div className="flex items-center gap-3"><Instagram className="h-4 w-4 text-primary" /> <a href="https://www.instagram.com/mukesh_chaudhari3995/" target="_blank" rel="noreferrer" className="hover:text-primary">@mukesh_chaudhari3995</a></div>
             </div>
           </Reveal>

@@ -23,7 +23,7 @@ export default function Footer() {
             A family of premium dance studios, cinematic events and cultural productions. Founded and led by Mukesh (Rudra) Chaudhari.
           </p>
           <a href={site.socials.instagram} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm hover:text-primary transition">
-            <Instagram className="h-4 w-4" /> @jayganeshfilmentpvtltd
+            <Instagram className="h-4 w-4" /> jayganeshfilmentpvtltd
           </a>
         </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
             <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Akshay Plaza, Hinjewadi Phase 1, Pune 411057</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +91 99239 51535</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +91 81496 63995</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@jayganeshfilms.com</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> mukeshchaudhari106@gmail.com</li>
           </ul>
         </div>
       </div>
