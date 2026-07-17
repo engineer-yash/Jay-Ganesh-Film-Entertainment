@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function FounderPage() {
   return (
-    <div className="pt-28 pb-24">
+    <div className="pt-28 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Founder' }]} />
       </div>
@@ -57,7 +57,7 @@ export default function FounderPage() {
         </div>
       </section>
 
-      <div className="mt-24"><MarqueeBand /></div>
+      <div className="mt-16"><MarqueeBand /></div>
 
       {/* AWARDS SHOWCASE */}
       <section className="mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -101,7 +101,7 @@ export default function FounderPage() {
         </div>
       </section>
 
-      <section className="mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="mt-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="rounded-3xl border border-border bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent p-10 md:p-14 text-center relative overflow-hidden">
             <FloatingRing className="absolute -top-20 -right-20 opacity-30" size={260} />

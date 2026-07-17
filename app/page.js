@@ -28,7 +28,7 @@ export default function HomePage() {
       <MarqueeBand />
 
       {/* FOUNDER PREVIEW */}
-      <section className="py-24 md:py-32">
+      <section className="py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
             <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">The Founder</div></Reveal>
@@ -94,7 +94,7 @@ export default function HomePage() {
       </section> */}
 
       {/* BRANCHES */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
+      <section className="py-14 md:py-20 bg-gradient-to-b from-transparent via-black/40 to-transparent">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -128,7 +128,7 @@ export default function HomePage() {
       <MarqueeBand reverse />
 
       {/* EVENTS */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
+      <section className="py-14 md:py-20 bg-gradient-to-b from-transparent via-black/40 to-transparent">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* YOUTUBE */}
-      <section className="py-24 md:py-32 relative overflow-hidden">
+      <section className="py-14 md:py-20 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -201,7 +201,7 @@ export default function HomePage() {
       <FAQ items={faqs.slice(0,6)} title="Questions, answered." />
 
       {/* CTA */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl p-10 md:p-16 border border-primary/30 bg-gradient-to-br from-primary/10 via-fuchsia-500/5 to-transparent text-center">

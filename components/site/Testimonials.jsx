@@ -6,7 +6,7 @@ import { Reveal } from './Motion';
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section className="py-14 md:py-20 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="max-w-3xl">
@@ -15,7 +15,7 @@ export default function Testimonials() {
             <p className="mt-4 text-muted-foreground text-lg">From first trial to first stage — hear it straight from the family.</p>
           </div>
         </Reveal>
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}

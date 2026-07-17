@@ -12,7 +12,7 @@ export default function GalleryPage() {
   const items = active === 'All' ? galleryImages : galleryImages.filter((i) => i.category === active);
 
   return (
-    <div className="pt-28 pb-24">
+    <div className="pt-28 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><Breadcrumbs items={[{ label: 'Gallery' }]} /></div>
 
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

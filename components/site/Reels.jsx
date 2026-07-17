@@ -9,7 +9,7 @@ const HOME_REELS_EMBED_ID = '25697952';
 
 export default function Reels() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-14 md:py-20 overflow-hidden">
       <motion.div
         aria-hidden
         className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"
@@ -25,7 +25,7 @@ export default function Reels() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
               <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
                 <Instagram className="h-3.5 w-3.5" /> Reels & Reels

@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function EventsPage() {
   return (
-    <div className="pt-28 pb-24">
+    <div className="pt-28 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><Breadcrumbs items={[{ label: 'Events' }]} /></div>
 
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export default function EventsPage() {
           <Reveal delay={0.2}><p className="mt-6 text-lg text-muted-foreground">From dance battles to Navratri nights to fashion runways — our events bring together India’s finest performers, designers and dreamers.</p></Reveal>
         </div>
 
-        <Stagger className="mt-16 grid md:grid-cols-3 gap-6">
+        <Stagger className="mt-10 grid md:grid-cols-3 gap-6">
           {events.map((e) => (
             <StaggerItem key={e.slug} y={60}>
               <Link href={`/events/${e.slug}`} className="group relative aspect-[3/4] overflow-hidden rounded-3xl ring-1 ring-border hover-lift block">
@@ -45,7 +45,7 @@ export default function EventsPage() {
         </Stagger>
       </section>
 
-      <div className="mt-24"><MarqueeBand /></div>
+      <div className="mt-16"><MarqueeBand /></div>
     </div>
   );
 }

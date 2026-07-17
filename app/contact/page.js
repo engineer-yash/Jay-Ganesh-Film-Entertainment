@@ -24,7 +24,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-28 pb-24">
+    <div className="pt-28 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><Breadcrumbs items={[{ label: 'Contact' }]} /></div>
 
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10">

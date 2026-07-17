@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { branches } from '@/data/branches';
 import { ArrowRight, MapPin, Phone, Instagram } from 'lucide-react';
+import Breadcrumbs from '@/components/site/Breadcrumbs';
 
 export const metadata = {
   title: 'Our Studios — 4 Dance Branches Across Pune',
@@ -19,15 +20,18 @@ export const metadata = {
 
 export default function BranchesPage() {
   return (
-    <div className="pt-32 pb-24">
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="pt-28 pb-16">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={[{ label: 'Branches' }]} />
+  </div>
+  <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.3em] text-primary">Our Studios</div>
           <h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Find your <span className="text-gradient-gold">stage</span> in Pune.</h1>
           <p className="mt-6 text-lg text-muted-foreground">Four locations, one philosophy — world-class training, community-first culture and stages that make you feel unstoppable.</p>
         </div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-6">
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
           {branches.map((b, i) => (
             <div key={b.slug} className="group relative overflow-hidden rounded-3xl border border-border bg-card/40 hover-lift">
               <Link href={`/branches/${b.slug}`} >
