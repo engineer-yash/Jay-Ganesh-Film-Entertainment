@@ -68,7 +68,7 @@ export default function Reels() {
             >
               <div
                 className="sk-ww-instagram-reels"
-                data-embed-id="25697936"
+                data-embed-id="25697952"
                 data-testid="reels-sociablekit-embed"
               />
             </div>
