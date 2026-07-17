@@ -18,7 +18,7 @@ export default function GalleryPage() {
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">Gallery</div></Reveal>
-          <Reveal delay={0.1}><h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Every frame is a <span className="text-gradient-gold italic">stage</span>.</h1></Reveal>
+          <Reveal delay={0.1}><h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Every frame is a <span className="text-gradient-gold">stage</span>.</h1></Reveal>
           <Reveal delay={0.2}><p className="mt-6 text-lg text-muted-foreground">A visual archive of our studios, students, events, films and everything in between. Filter by category — click any image to see it full-size.</p></Reveal>
         </div>
 

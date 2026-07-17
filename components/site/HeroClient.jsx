@@ -13,7 +13,7 @@ export default function HeroClient() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
 
-  const words = ['Where', 'Dance,', 'Films &', 'Culture ', 'come alive.'];
+  const words = ['Where', 'Dance,', 'Films &', 'Culture', 'come alive.'];
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-24 overflow-hidden spotlight">
@@ -38,7 +38,7 @@ export default function HeroClient() {
                   initial={{ y: '110%', rotate: -6, opacity: 0 }}
                   animate={{ y: 0, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.85, delay: 0.15 + i * 0.12, ease: [0.2, 0.7, 0.2, 1] }}
-                  className={`inline-block ${(word === 'Dance,' || word === 'Culture ') ? 'text-gradient-gold italic' : ''}`}
+                  className={`inline-block ${(word === 'Dance,' || word === 'Culture ') ? 'text-gradient-gold' : ''}`}
                 >
                   {word}
                 </motion.span>
