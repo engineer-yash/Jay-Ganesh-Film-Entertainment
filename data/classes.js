@@ -1,4 +1,4 @@
-export const services = [
+export const classes = [
   {
     slug: 'adult-lessons',
     title: 'Adult Lessons',
