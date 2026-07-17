@@ -91,12 +91,12 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-border/60">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} {site.legal}. All rights reserved.</div>
-          <div className="flex items-center gap-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+          <div className="text-center sm:text-left">© {new Date().getFullYear()} {site.legal}. All rights reserved.</div>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-right">
             <Link href="/privacy-policy" className="hover:text-primary">Privacy</Link>
             <Link href="/terms-and-conditions" className="hover:text-primary">Terms</Link>
-            <span>Designed & Developed by <a href={site.credit.url} target="_blank" rel="noreferrer" className="text-primary hover:underline">{site.credit.name}</a></span>
+            <span className="block">Designed & Developed by <a href={site.credit.url} target="_blank" rel="noreferrer" className="text-primary hover:underline">{site.credit.name}</a></span>
           </div>
         </div>
       </div>
