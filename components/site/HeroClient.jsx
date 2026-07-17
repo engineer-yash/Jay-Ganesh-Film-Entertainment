@@ -38,7 +38,7 @@ export default function HeroClient() {
                   initial={{ y: '110%', rotate: -6, opacity: 0 }}
                   animate={{ y: 0, rotate: 0, opacity: 1 }}
                   transition={{ duration: 0.85, delay: 0.15 + i * 0.12, ease: [0.2, 0.7, 0.2, 1] }}
-                  className={`inline-block ${(word === 'Dance,' || word === 'Culture ') ? 'text-gradient-gold' : ''}`}
+                  className={`inline-block ${(word === 'Dance,' || word === 'Culture') ? 'text-gradient-gold' : ''}`}
                 >
                   {word}
                 </motion.span>
