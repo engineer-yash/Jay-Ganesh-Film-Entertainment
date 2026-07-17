@@ -1,14 +1,24 @@
 'use client';
-import { Play, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { reels } from '@/data/reels';
+import Script from 'next/script';
 import { Reveal } from './Motion';
 
 export default function Reels() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      <motion.div aria-hidden className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" animate={{ scale: [1, 1.15, 1] }} transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }} />
-      <motion.div aria-hidden className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }} />
+      <motion.div
+        aria-hidden
+        className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
@@ -17,41 +27,66 @@ export default function Reels() {
               <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
                 <Instagram className="h-3.5 w-3.5" /> Reels & Reels
               </div>
-              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Watch the <span className="text-gradient-gold">movement.</span></h2>
-              <p className="mt-3 text-muted-foreground max-w-xl">Every reel is a stage. Every stage tells a story. Tap any tile to jump to the reel on Instagram.</p>
+              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">
+                Watch the <span className="text-gradient-gold">movement.</span>
+              </h2>
+              <p className="mt-3 text-muted-foreground max-w-xl">
+                Every reel is a stage. Every stage tells a story. Explore the latest reels straight from our Instagram.
+              </p>
             </div>
+            <a
+              href="https://www.instagram.com/jayganeshfilmentertainment"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 self-start md:self-auto rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.25em] ring-1 ring-primary/40 text-primary hover:bg-primary/10 transition-colors"
+              data-testid="reels-instagram-follow-link"
+            >
+              <Instagram className="h-4 w-4" /> Follow on Instagram
+            </a>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {reels.map((r, i) => (
-            <motion.a
-              key={r.title}
-              href={r.href}
-              target="_blank"
-              rel="noreferrer"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              whileHover={{ y: -8, rotate: i % 2 === 0 ? 1.5 : -1.5 }}
-              className="group relative aspect-[9/16] rounded-2xl overflow-hidden ring-1 ring-border"
+        <Reveal>
+          <div
+            className="relative rounded-3xl overflow-hidden ring-1 ring-border bg-gradient-to-b from-background/60 to-background/20 backdrop-blur-sm shadow-2xl"
+            data-testid="reels-instagram-widget-wrapper"
+          >
+            {/* Decorative gradient border glow */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-primary/20"
+            />
+
+            {/* Height-limited, scrollable container so the widget stays contained and responsive */}
+            <div
+              className="relative w-full overflow-y-auto overflow-x-hidden
+                         h-[70vh] min-h-[520px] max-h-[820px]
+                         [&::-webkit-scrollbar]:w-2
+                         [&::-webkit-scrollbar-track]:bg-transparent
+                         [&::-webkit-scrollbar-thumb]:bg-primary/40
+                         [&::-webkit-scrollbar-thumb]:rounded-full"
             >
-              <img src={r.cover} alt={r.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div className="h-14 w-14 rounded-full bg-primary/90 flex items-center justify-center text-primary-foreground shadow-2xl" animate={{ scale: [1, 1.08, 1] }} transition={{ repeat: Infinity, duration: 2 }}>
-                  <Play className="h-6 w-6 fill-current" />
-                </motion.div>
-              </div>
-              <div className="absolute bottom-3 left-3 right-3">
-                <div className="text-xs font-semibold">{r.title}</div>
-                <div className="text-[10px] uppercase tracking-widest text-primary mt-1 flex items-center gap-1"><Instagram className="h-3 w-3" /> View reel</div>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+              <div
+                className="sk-ww-instagram-reels"
+                data-embed-id="25697936"
+                data-testid="reels-sociablekit-embed"
+              />
+            </div>
+
+            {/* Bottom fade for polish */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"
+            />
+          </div>
+        </Reveal>
       </div>
+
+      {/* Load the SociableKit widget script once, after page becomes interactive */}
+      <Script
+        src="https://widgets.sociablekit.com/instagram-reels/widget.js"
+        strategy="afterInteractive"
+      />
     </section>
   );
 }
