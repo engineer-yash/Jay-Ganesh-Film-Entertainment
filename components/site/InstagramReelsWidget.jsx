@@ -1,54 +1,50 @@
 'use client';
-import { useEffect, useRef } from 'react';
-
-const SK_SCRIPT_SRC = 'https://widgets.sociablekit.com/instagram-reels/widget.js';
+import { useMemo } from 'react';
 
 /**
- * SociableKit Instagram Reels widget — SPA-safe.
+ * SociableKit Instagram Reels widget — rendered inside an isolated iframe.
  *
- * SociableKit's widget.js scans the DOM for `.sk-ww-instagram-reels` elements
- * only once, when the script is first parsed. On Next.js client-side navigation
- * the script is already in memory and never re-scans, which is why the widget
- * looks empty unless you hard-reload the page.
+ * Why an iframe?
+ *   SociableKit's widget.js uses global window state and only scans the DOM
+ *   once. On Next.js client-side navigation the script is already "initialized"
+ *   in memory, which is why the widget hangs on the loader spinner and only
+ *   works after a hard refresh.
  *
- * Fix: on every mount, remove any existing SociableKit script tag, clear our
- * own container, and inject a fresh cache-busted script tag so the browser
- * re-executes it and re-scans the DOM.
+ *   Rendering inside an iframe (via srcDoc) gives every instance its own
+ *   fresh window + document. On route change React unmounts the iframe,
+ *   mounts a new one, and the widget initializes cleanly every time.
  */
 export default function InstagramReelsWidget({
   embedId,
   heightClass = 'h-[70vh] min-h-[520px] max-h-[820px]',
   className = '',
 }) {
-  const embedRef = useRef(null);
-
-  useEffect(() => {
-    if (!embedId || typeof window === 'undefined') return;
-
-    // 1. Clear anything the previous widget instance rendered inside our div
-    if (embedRef.current) {
-      embedRef.current.innerHTML = '';
+  const srcDoc = useMemo(() => {
+    if (!embedId) return '';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #fff;
     }
-
-    // 2. Remove any existing SociableKit script tags so the new one re-executes
-    document
-      .querySelectorAll(`script[src^="${SK_SCRIPT_SRC}"]`)
-      .forEach((s) => s.remove());
-
-    // 3. Inject a fresh, cache-busted script tag
-    const script = document.createElement('script');
-    script.src = `${SK_SCRIPT_SRC}?v=${Date.now()}`;
-    script.defer = true;
-    script.setAttribute('data-sk-instagram-reels', 'true');
-    document.body.appendChild(script);
-
-    // 4. Cleanup on unmount / embedId change
-    return () => {
-      script.remove();
-      if (embedRef.current) {
-        embedRef.current.innerHTML = '';
-      }
-    };
+    /* Custom scrollbar inside the iframe (WebKit) */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 999px; }
+  </style>
+</head>
+<body>
+  <div class="sk-ww-instagram-reels" data-embed-id="${embedId}"></div>
+  <script src="https://widgets.sociablekit.com/instagram-reels/widget.js" defer></script>
+</body>
+</html>`;
   }, [embedId]);
 
   if (!embedId) return null;
@@ -61,22 +57,19 @@ export default function InstagramReelsWidget({
       {/* Decorative gradient border glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-primary/20"
+        className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-primary/20 z-10"
       />
 
-      {/* Height-limited, scrollable container */}
-      <div
-        className={`relative w-full overflow-y-auto overflow-x-hidden ${heightClass}
-                    [&::-webkit-scrollbar]:w-2
-                    [&::-webkit-scrollbar-track]:bg-transparent
-                    [&::-webkit-scrollbar-thumb]:bg-primary/40
-                    [&::-webkit-scrollbar-thumb]:rounded-full`}
-      >
-        <div
-          ref={embedRef}
+      {/* Fresh iframe per embedId — key forces remount on navigation */}
+      <div className={`relative w-full ${heightClass}`}>
+        <iframe
           key={embedId}
-          className="sk-ww-instagram-reels"
-          data-embed-id={embedId}
+          title="Instagram Reels"
+          srcDoc={srcDoc}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-full border-0 block bg-transparent"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
           data-testid={`instagram-reels-embed-${embedId}`}
         />
       </div>
@@ -84,7 +77,7 @@ export default function InstagramReelsWidget({
       {/* Bottom fade for polish */}
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-background to-transparent z-10"
       />
     </div>
   );
