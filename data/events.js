@@ -48,7 +48,7 @@ export const events = [
       { q: 'Can designers apply?', a: 'Yes. We onboard 8–12 designers per edition — apply via our contact page.' },
       { q: 'Is media coverage available?', a: 'Every edition is professionally photographed and filmed. Coverage is shared with participants.' },
     ],
-    sociablekitId: '25697936',
+    sociablekitId: '25697974',
   },
 ];
 
