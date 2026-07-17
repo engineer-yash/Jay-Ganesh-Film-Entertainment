@@ -6,6 +6,7 @@ import { ArrowRight, Instagram, Sparkles, Calendar } from 'lucide-react';
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import FAQ from '@/components/site/FAQ';
 import { Reveal, Stagger, StaggerItem, FloatingRing } from '@/components/site/Motion';
+import InstagramReelsWidget from '@/components/site/InstagramReelsWidget';
 
 export async function generateStaticParams() {
   return events.map((e) => ({ slug: e.slug }));
@@ -53,20 +54,31 @@ export default async function EventDetail({ params }) {
         </Reveal>
       </section>
 
-      {/* Gallery */}
-      <section className="mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">Previous Editions</div></Reveal>
-        <Reveal delay={0.1}><h2 className="font-display text-4xl md:text-5xl mt-3">Moments from <span className="text-gradient-gold">the stage</span>.</h2></Reveal>
-        <Stagger className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {e.gallery.map((g, i) => (
-            <StaggerItem key={i} y={40}>
-              <div className="relative aspect-square rounded-2xl overflow-hidden ring-1 ring-border group">
-                <img src={g} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </section>
+      {/* Moments from the stage — Instagram reels */}
+      {e.sociablekitId && (
+        <section className="mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
+              <Instagram className="h-3.5 w-3.5" /> Previous Editions
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="font-display text-4xl md:text-5xl mt-3">
+              Moments from <span className="text-gradient-gold">the stage</span>.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="mt-3 text-muted-foreground max-w-xl">
+              Live reels from {e.name} — see the energy, the crowd and the performances as they happened.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-8">
+              <InstagramReelsWidget embedId={e.sociablekitId} />
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* Upcoming placeholder */}
       <section className="mt-24 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

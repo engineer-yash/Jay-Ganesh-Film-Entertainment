@@ -13,6 +13,7 @@ export const branches = [
     poster: '/images/hinjewadi-poster-2.jpg',
     accent: 'from-amber-400 via-rose-500 to-fuchsia-600',
     highlights: ['Weekday & Weekend Batches', 'Hall Rental', 'Workshops', 'Kids to Pro Levels'],
+    sociablekitId: '25697953',
     weekday: [
       { time: '7:00 – 8:00 AM', class: 'Zumba Workshout + Bollywood Dance' },
       { time: '8:00 – 9:00 AM', class: 'Zumba Workshout + Bollywood Dance' },
@@ -57,6 +58,7 @@ export const branches = [
     accent: 'from-fuchsia-500 via-purple-600 to-indigo-700',
     highlights: ['Bollywood', 'Hip Hop', 'Fitness', 'All Ages'],
     classes: ['Bollywood', 'Hip-Hop', 'Fitness', 'Kids Dance', 'Zumba'],
+    sociablekitId: '25697936',
   },
   {
     slug: 'shubh-dance-company',
@@ -74,10 +76,12 @@ export const branches = [
     accent: 'from-yellow-400 via-orange-500 to-red-600',
     highlights: ['Dance Workshops', 'Hall Rental', 'Professional Classes'],
     classes: ['Workshops', 'Choreography Intensive', 'Professional Batches'],
+    sociablekitId: '25697936',
     workshops: [
       { title: 'Bollywood Choreography Intensive', date: 'Rolling', mentor: 'Mukesh Chaudhari' },
       { title: 'Hip-Hop Foundations Bootcamp', date: 'Monthly', mentor: 'Guest Choreographer' },
       { title: 'Wedding Choreography Weekend', date: 'On Request', mentor: 'Shubh Team' },
+      
     ],
   },
   {
@@ -95,6 +99,7 @@ export const branches = [
     accent: 'from-emerald-400 via-teal-500 to-cyan-600',
     highlights: ['Bollywood', 'Kids Dance', 'Kathak', 'Fitness', 'Guitar'],
     classes: ['Bollywood', 'Kids Dance', 'Kathak', 'Fitness', 'Workout', 'Guitar'],
+    sociablekitId: '25697936',
   },
 ];
 

@@ -5,6 +5,7 @@ import { branches, getBranch } from '@/data/branches';
 import {
   MapPin, Phone, Instagram, ArrowLeft, Clock, IndianRupee, Sparkles,
 } from 'lucide-react';
+import InstagramReelsWidget from '@/components/site/InstagramReelsWidget';
 
 // Pre-generate static pages for all branches
 export function generateStaticParams() {
@@ -248,6 +249,24 @@ export default function BranchDetailPage({ params }) {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+        
+      {/* Instagram reels — only render if this branch has an embed ID */}
+        {b.sociablekitId && (
+          <div className="mt-16">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary">
+              <Instagram className="h-3.5 w-3.5" /> Latest Reels
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl mt-3 leading-tight">
+              Straight from our <span className="text-gradient-gold">Instagram</span>
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground max-w-xl">
+              The latest moments, rehearsals and performances from {b.name}.
+            </p>
+            <div className="mt-6">
+              <InstagramReelsWidget embedId={b.sociablekitId} />
             </div>
           </div>
         )}
