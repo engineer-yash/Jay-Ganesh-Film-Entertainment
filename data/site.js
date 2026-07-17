@@ -9,7 +9,7 @@ export const site = {
     { href: '/', label: 'Home' },
     { href: '/founder', label: 'Founder' },
     { href: '/branches', label: 'Branches' },
-    { href: '/services', label: 'Services' },
+    { href: '/classes', label: 'Classes' },
     { href: '/events', label: 'Events' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },

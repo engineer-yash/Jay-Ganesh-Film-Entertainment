@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Sparkles, Search } from 'lucide-react';
-import { services } from '@/data/services';
+import { classes } from '@/data/classes';
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import MarqueeBand from '@/components/site/MarqueeBand';
 
@@ -16,21 +16,21 @@ const ACCENTS = [
   'from-violet-500/40 via-fuchsia-500/30 to-rose-500/30',
 ];
 
-export default function ServicesPage() {
+export default function ClassesPage() {
   const [selected, setSelected] = useState(null);
   const [query, setQuery] = useState('');
   const [activeCat, setActiveCat] = useState('All');
 
-  const categories = ['All', ...Array.from(new Set(services.map((s) => s.category)))];
+  const categories = ['All', ...Array.from(new Set(classes.map((c) => c.category)))];
 
-  const filtered = services.filter((s) => {
-    const matchCat = activeCat === 'All' || s.category === activeCat;
+  const filtered = classes.filter((c) => {
+    const matchCat = activeCat === 'All' || c.category === activeCat;
     const q = query.trim().toLowerCase();
     const matchQ =
       !q ||
-      s.title.toLowerCase().includes(q) ||
-      s.short.toLowerCase().includes(q) ||
-      s.description.toLowerCase().includes(q);
+      c.title.toLowerCase().includes(q) ||
+      c.short.toLowerCase().includes(q) ||
+      c.description.toLowerCase().includes(q);
     return matchCat && matchQ;
   });
 
@@ -56,7 +56,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-28 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: 'Services' }]} />
+        <Breadcrumbs items={[{ label: 'Classes' }]} />
       </div>
 
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ export default function ServicesPage() {
             My Style Dance Studio
           </div>
           <h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">
-            Classes &amp; <span className="text-gradient-gold">Services.</span>
+            Classes &amp; <span className="text-gradient-gold">Programs.</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
             Bollywood, Hip Hop, Classical, Fitness, Music &amp; Art — 25+ programs
@@ -198,7 +198,7 @@ export default function ServicesPage() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            key="services-modal"
+            key="classes-modal"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
