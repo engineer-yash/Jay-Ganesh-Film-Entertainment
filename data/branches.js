@@ -58,7 +58,7 @@ export const branches = [
     accent: 'from-fuchsia-500 via-purple-600 to-indigo-700',
     highlights: ['Bollywood', 'Hip Hop', 'Fitness', 'All Ages'],
     classes: ['Bollywood', 'Hip-Hop', 'Fitness', 'Kids Dance', 'Zumba'],
-    sociablekitId: '25697936',
+    sociablekitId: '25697961',
   },
   {
     slug: 'shubh-dance-company',
@@ -76,7 +76,7 @@ export const branches = [
     accent: 'from-yellow-400 via-orange-500 to-red-600',
     highlights: ['Dance Workshops', 'Hall Rental', 'Professional Classes'],
     classes: ['Workshops', 'Choreography Intensive', 'Professional Batches'],
-    sociablekitId: '25697936',
+    sociablekitId: '25697964',
     workshops: [
       { title: 'Bollywood Choreography Intensive', date: 'Rolling', mentor: 'Mukesh Chaudhari' },
       { title: 'Hip-Hop Foundations Bootcamp', date: 'Monthly', mentor: 'Guest Choreographer' },
@@ -99,7 +99,7 @@ export const branches = [
     accent: 'from-emerald-400 via-teal-500 to-cyan-600',
     highlights: ['Bollywood', 'Kids Dance', 'Kathak', 'Fitness', 'Guitar'],
     classes: ['Bollywood', 'Kids Dance', 'Kathak', 'Fitness', 'Workout', 'Guitar'],
-    sociablekitId: '25697936',
+    sociablekitId: '25697962',
   },
 ];
 

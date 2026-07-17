@@ -14,7 +14,7 @@ export const events = [
       { q: 'What is the registration process?', a: 'Register via our Instagram DM or the contact form. Auditions are held before the main event.' },
       { q: 'Are there cash prizes?', a: 'Yes — winners across categories receive cash prizes, trophies and choreography opportunities.' },
     ],
-    sociablekitId: '25697936',
+    sociablekitId: '25697960',
   },
   {
     slug: 'shubh-garba',
@@ -31,7 +31,7 @@ export const events = [
       { q: 'Do I need to book passes in advance?', a: 'Yes, early-bird passes are highly recommended — the event sells out every year.' },
       { q: 'Is there a dress code?', a: 'Traditional Navratri attire is encouraged. Best-dressed contests every night!' },
     ],
-    sociablekitId: '25697936',
+    sociablekitId: '25697958',
   },
   {
     slug: 'glamour-gateway',

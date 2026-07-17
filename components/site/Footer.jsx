@@ -23,7 +23,7 @@ export default function Footer() {
             A family of premium dance studios, cinematic events and cultural productions. Founded and led by Mukesh (Rudra) Chaudhari.
           </p>
           <a href={site.socials.instagram} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm hover:text-primary transition">
-            <Instagram className="h-4 w-4" /> Follow the founder
+            <Instagram className="h-4 w-4" /> @jayganeshfilmentpvtltd
           </a>
         </div>
 
