@@ -113,7 +113,7 @@ export const branches = [
   maps: 'https://maps.app.goo.gl/h4GRmZY6NjnbisTs9',
   mapsEmbed:
     'https://www.google.com/maps?q=Grand+Highstreet+Mall+Hinjewadi+Phase+1+Pune&output=embed',
-  image: '/images/shubh-studio-logo.png',      // OUTSIDE — logo thumbnail
+  image: '/images/shubh-studio-logo.jpg',      // OUTSIDE — logo thumbnail
   poster: '/images/shubh-studio-poster.jpg',   // INSIDE — full white poster
   accent: 'from-yellow-400 via-orange-500 to-red-600',
   highlights: [
