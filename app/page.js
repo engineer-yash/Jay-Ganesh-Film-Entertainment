@@ -42,7 +42,7 @@ export default function HomePage() {
             <Reveal delay={0.4}><Link href="/founder" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">Explore his journey <ArrowRight className="h-4 w-4" /></Link></Reveal>
           </div>
           <Reveal className="lg:col-span-6" y={60}>
-            <div className="relative aspect-square rounded-3xl overflow-hidden ring-1 ring-border">
+            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden ring-1 ring-border">
               <Image src="/images/mukesh-chaudhari-1.jpg" alt="Mukesh Rudra Chaudhari" fill className="object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
