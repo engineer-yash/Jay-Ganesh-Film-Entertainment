@@ -11,7 +11,6 @@ export const site = {
     { href: '/branches', label: 'Branches' },
     { href: '/classes', label: 'Classes' },
     { href: '/events', label: 'Events' },
-    { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
   ],
   socials: {
