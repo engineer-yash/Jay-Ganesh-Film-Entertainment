@@ -160,7 +160,7 @@ Head Hinjewadi Office :- 9923951535`
   <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
     <div className="shrink-0 rounded-lg bg-white p-2">
       <Image
-        src="/images/phonepe-qr.png"
+        src="/images/phonepe-qr.jpg"
         alt="PhonePe QR - Choudhary Mukesh Lumbaram"
         width={160}
         height={160}

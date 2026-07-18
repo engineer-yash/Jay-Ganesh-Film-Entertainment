@@ -1,10 +1,11 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, PlayCircle } from 'lucide-react';
+import { ArrowRight, Sparkles, PlayCircle, CalendarDays, Clock, MapPin, Handshake } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { founder } from '@/data/founder';
+import { getEvent } from '@/data/events';
 
 export default function HeroClient() {
   const ref = useRef(null);
@@ -14,6 +15,7 @@ export default function HeroClient() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
 
   const words = ['Where', 'Dance,', 'Films &', 'Culture', 'come alive.'];
+  const upcoming = getEvent('shubh-garba');
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-24 overflow-hidden spotlight">
@@ -26,6 +28,7 @@ export default function HeroClient() {
       <motion.div aria-hidden animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 80, ease: 'linear' }} className="absolute bottom-10 -right-40 h-[500px] w-[500px] rounded-full border border-fuchsia-500/10 pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center pt-5 pb-20 relative">
+        {/* LEFT — unchanged */}
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-primary">
             <Sparkles className="h-3.5 w-3.5" /> Crafted since 2003
@@ -69,20 +72,78 @@ export default function HeroClient() {
           </div>
         </div>
 
+        {/* RIGHT — Upcoming Event Card (replaces the three floating images) */}
         <div className="lg:col-span-5 relative">
-          <motion.div initial={{ opacity: 0, scale: 0.9, rotate: -3 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 1, delay: 0.3 }} whileHover={{ rotate: 2, scale: 1.02 }} className="relative aspect-[3/4] max-w-md mx-auto rounded-3xl overflow-hidden ring-1 ring-border shadow-2xl shadow-primary/10">
-            <Image src="/images/hinjewadi-poster-1.jpg" alt="My Style Dance Studio" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <div className="absolute bottom-6 right-6 text-right max-w-xs">
-              <div className="text-xs uppercase tracking-[0.3em] text-primary">Now enrolling</div>
-              <div className="font-display text-2xl mt-1">Hinjewadi Flagship Studio</div>
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.3 }}
+            className="relative rounded-3xl overflow-hidden ring-1 ring-primary/30 bg-gradient-to-br from-amber-500/10 via-fuchsia-500/5 to-background shadow-2xl shadow-primary/10"
+          >
+            {/* Poster header */}
+            <div className="relative aspect-[16/10]">
+              <Image
+                src={upcoming.image}
+                alt={upcoming.name}
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-primary/90 text-primary-foreground px-3 py-1 text-[10px] uppercase tracking-[0.25em] font-semibold">
+                <Sparkles className="h-3 w-3" /> Upcoming Event
+              </div>
             </div>
-          </motion.div>
-          <motion.div animate={{ y: [0, -14, 0], rotate: [6, 8, 6] }} transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }} className="hidden md:block absolute -top-6 -right-2 rounded-2xl overflow-hidden ring-1 ring-border w-40 aspect-[3/4] shadow-xl">
-            <Image src="/images/tandav/tandav.jpg" alt="Tandav" fill className="object-cover" />
-          </motion.div>
-          <motion.div animate={{ y: [0, 14, 0], rotate: [-6, -8, -6] }} transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }} className="hidden md:block absolute -bottom-8 -left-6 rounded-2xl overflow-hidden ring-1 ring-border w-44 aspect-[3/4] shadow-xl">
-            <Image src="/images/shubh-garba/shubh-garba.jpg" alt="Shubh Garba" fill className="object-cover" />
+
+            {/* Details */}
+            <div className="p-6 md:p-7">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-primary">{upcoming.since}</div>
+              <h3 className="font-display text-3xl md:text-4xl mt-2 leading-tight">
+                Shubh Garba <span className="text-gradient-gold">Raas Dandiya 2026</span>
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground italic">{upcoming.tagline}</p>
+
+              <div className="mt-5 space-y-2.5 text-sm">
+                <div className="flex items-start gap-3">
+                  <CalendarDays className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                  <span>{upcoming.date}</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                  <span>{upcoming.time}</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+                  <span>{upcoming.venue}</span>
+                </div>
+              </div>
+
+              {/* mini stats */}
+              <div className="mt-5 grid grid-cols-3 gap-3">
+                {upcoming.stats.slice(0, 3).map((s) => (
+                  <div key={s.label} className="rounded-xl border border-border bg-card/40 px-3 py-2 text-center">
+                    <div className="font-display text-lg text-gradient-gold leading-none">{s.value}</div>
+                    <div className="mt-1 text-[9px] uppercase tracking-[0.15em] text-muted-foreground leading-tight">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTAs */}
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/events/shubh-garba"
+                  className="group inline-flex flex-1 items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition text-sm"
+                >
+                  View Full Details <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+                </Link>
+                <Link
+                  href="/events/shubh-garba#sponsorship"
+                  className="group inline-flex flex-1 items-center justify-center gap-2 px-5 py-3 rounded-full border border-primary/40 text-primary hover:bg-primary/10 transition text-sm font-semibold"
+                >
+                  <Handshake className="h-4 w-4" /> Become a Sponsor
+                </Link>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
