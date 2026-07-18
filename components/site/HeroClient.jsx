@@ -53,17 +53,17 @@ export default function HeroClient() {
             Jay Ganesh Films Entertainment is a family of premium dance studios, cinematic events and cultural productions — started by national dance icon <span className="text-foreground font-medium">Mukesh (Rudra) Chaudhari</span>.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.05 }} className="mt-10 flex flex-wrap gap-4">
-            <Link href="/branches" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition shadow-lg shadow-primary/20 hover:shadow-primary/40">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.05 }} className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <Link href="/branches" className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition shadow-lg shadow-primary/20 hover:shadow-primary/40">
               Explore Studios <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
             </Link>
-            <Link href="/founder" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
+            <Link href="/founder" className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
               <PlayCircle className="h-4 w-4 group-hover:text-primary transition" /> Meet the Founder
             </Link>
-            <Link href="/events" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
+            <Link href="/events" className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
               <CalendarDays className="h-4 w-4 group-hover:text-primary transition" /> Events
             </Link>
-            <Link href="/classes" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
+            <Link href="/classes" className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
               <Clock className="h-4 w-4 group-hover:text-primary transition" /> Classes
             </Link>
           </motion.div>

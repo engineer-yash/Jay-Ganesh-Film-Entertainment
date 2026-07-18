@@ -39,7 +39,10 @@ export default function HomePage() {
                 <StaggerItem key={k} className="flex items-start gap-2 text-sm"><Star className="h-4 w-4 mt-0.5 text-primary" /> {k}</StaggerItem>
               ))}
             </Stagger>
-            <Reveal delay={0.4}><Link href="/founder" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">Explore his journey <ArrowRight className="h-4 w-4" /></Link></Reveal>
+            <Reveal delay={0.4}><div className="mt-8 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+              <Link href="/founder" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">Explore his journey <ArrowRight className="h-4 w-4" /></Link>
+              <a href={founder.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 transition"><Instagram className="h-4 w-4" /> Follow</a>
+            </div></Reveal>
           </div>
           <Reveal className="lg:col-span-6" y={60}>
             <div className="relative aspect-[3/4] rounded-3xl overflow-hidden ring-1 ring-border">
