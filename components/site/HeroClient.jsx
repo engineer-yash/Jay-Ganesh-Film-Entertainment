@@ -20,14 +20,14 @@ export default function HeroClient() {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-24 overflow-hidden spotlight">
       <motion.div style={{ y, scale, opacity }} className="absolute inset-0 -z-10">
-        <Image src="/images/back-logo.jpg" alt="" fill priority className="object-cover object-center opacity-30" />
+        <Image src="/images/secondary.png" alt="" fill priority className="object-cover object-center opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/90 to-background" />
       </motion.div>
 
       <motion.div aria-hidden animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 60, ease: 'linear' }} className="absolute top-24 -left-32 h-96 w-96 rounded-full border border-primary/10 pointer-events-none" />
       <motion.div aria-hidden animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 80, ease: 'linear' }} className="absolute bottom-10 -right-40 h-[500px] w-[500px] rounded-full border border-fuchsia-500/10 pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center pt-3 pb-20 relative">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center pt-2 pb-20 relative">
         {/* LEFT — unchanged */}
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-primary">
