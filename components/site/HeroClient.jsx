@@ -60,6 +60,12 @@ export default function HeroClient() {
             <Link href="/founder" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
               <PlayCircle className="h-4 w-4 group-hover:text-primary transition" /> Meet the Founder
             </Link>
+            <Link href="/events" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
+              <CalendarDays className="h-4 w-4 group-hover:text-primary transition" /> Events
+            </Link>
+            <Link href="/classes" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition">
+              <Clock className="h-4 w-4 group-hover:text-primary transition" /> Classes
+            </Link>
           </motion.div>
 
           <div className="mt-14 grid grid-cols-4 gap-6 max-w-lg">
