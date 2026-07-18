@@ -3,7 +3,7 @@ export const founder = {
   title: 'Founder, Choreographer, Film Producer & Mentor',
   heading: 'Overcoming Circumstances to Make an Outstanding Contribution to Dance',
   instagram: 'https://www.instagram.com/mukesh_chaudhari3995/',
-  image: '/images/founder.jpg',
+  image: '/images/mukesh-chaudhari-2.jpg',
   quote: 'You should never stop dreaming.',
 
   intro:

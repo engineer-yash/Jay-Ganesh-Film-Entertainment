@@ -141,7 +141,7 @@ Head Hinjewadi Office :- 9923951535`
         </label>
       </div>
 
-      <div className="pt-2">
+      {/* <div className="pt-2">
         <p className="text-sm text-white/70 mb-2">Fee Plan (Mon–Fri Classes)</p>
         <div className="flex flex-col md:flex-row gap-3">
           <label className={`flex-1 cursor-pointer rounded-lg border px-4 py-3 text-sm ${form.plan === 'per_month' ? 'border-amber-400 bg-amber-400/10' : 'border-white/10 bg-white/5'}`}>
@@ -153,7 +153,7 @@ Head Hinjewadi Office :- 9923951535`
             3 Months — ₹4000/-
           </label>
         </div>
-      </div>
+      </div> */}
 
       {/* Pay Directly — PhonePe QR */}
 <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-4 md:p-5">

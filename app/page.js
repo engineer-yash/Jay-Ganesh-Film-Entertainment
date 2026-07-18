@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
           <Reveal className="lg:col-span-6" y={60}>
             <div className="relative aspect-square rounded-3xl overflow-hidden ring-1 ring-border">
-              <Image src="/images/founder.jpg" alt="Mukesh Rudra Chaudhari" fill className="object-cover object-top" />
+              <Image src="/images/mukesh-chaudhari-1.jpg" alt="Mukesh Rudra Chaudhari" fill className="object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                 <div>
