@@ -8,7 +8,7 @@ export const branches = [
     phone: '9923951535',
     instagram: 'https://www.instagram.com/my_styledstudio_/',
     maps: 'https://maps.app.goo.gl/W7B6tTnHZmRTQy649',
-    mapsEmbed: 'https://maps.app.goo.gl/W7B6tTnHZmRTQy649',
+    mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.8395864041304!2d73.73574407428886!3d18.590002867051453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc40101777b%3A0xd4ac8bb448d88e9b!2sMY%20STYLE%20DANCE%20STUDIO!5e1!3m2!1sen!2sin!4v1784374018221!5m2!1sen!2sin',
     image: '/images/my-style-studio.jpg',
     poster: '/images/hinjewadi-poster-2.jpg',
     accent: 'from-amber-400 via-rose-500 to-fuchsia-600',
