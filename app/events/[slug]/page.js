@@ -45,7 +45,16 @@ export default async function EventDetail({ params }) {
       {/* HERO */}
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-6">
-          <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">{e.since}</div></Reveal>
+          <Reveal>
+  <div className="flex items-center gap-3 flex-wrap">
+    <div className="text-xs uppercase tracking-[0.3em] text-primary">{e.since}</div>
+    {e.pastEdition && (
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+        <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground" /> Concluded
+      </span>
+    )}
+  </div>
+</Reveal>
           <Reveal delay={0.1}><h1 className="font-display text-5xl md:text-7xl mt-3 leading-[1.02]">{e.name}</h1></Reveal>
           <Reveal delay={0.2}><p className="mt-3 text-lg text-muted-foreground italic">{e.tagline}</p></Reveal>
           <Reveal delay={0.3}><p className="mt-6 text-muted-foreground text-lg leading-relaxed">{e.about}</p></Reveal>
@@ -289,24 +298,33 @@ export default async function EventDetail({ params }) {
 
       {/* Upcoming placeholder — hide when this event itself is the upcoming one */}
       {!e.isUpcoming && (
-        <section className="mt-24 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 to-fuchsia-500/5 p-10 md:p-14 text-center relative overflow-hidden">
-              <FloatingRing className="absolute -top-20 -right-20 opacity-30" size={260} />
-              <Calendar className="h-6 w-6 text-primary mx-auto" />
-              <h3 className="font-display text-3xl md:text-5xl mt-4">
-                Next edition <span className="text-gradient-gold">coming soon</span>.
-              </h3>
-              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-                Follow us on Instagram or drop your details — you’ll be the first to know.
-              </p>
-              <Link href="/contact" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold">
-                Get notified <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
-        </section>
-      )}
+  <section className="mt-24 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <Reveal>
+      <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 to-fuchsia-500/5 p-10 md:p-14 text-center relative overflow-hidden">
+        <FloatingRing className="absolute -top-20 -right-20 opacity-30" size={260} />
+        <Calendar className="h-6 w-6 text-primary mx-auto" />
+        <h3 className="font-display text-3xl md:text-5xl mt-4">
+          {e.pastEdition ? (
+            <>This edition is a wrap. <span className="text-gradient-gold">Next one loading.</span></>
+          ) : (
+            <>Next edition <span className="text-gradient-gold">coming soon</span>.</>
+          )}
+        </h3>
+        <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+          {e.nextEditionNote || 'Follow us on Instagram or drop your details — you’ll be the first to know.'}
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3 justify-center">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition">
+            Get notified <ArrowRight className="h-4 w-4" />
+          </Link>
+          <a href={e.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-primary hover:text-primary transition">
+            <Instagram className="h-4 w-4" /> Follow event
+          </a>
+        </div>
+      </div>
+    </Reveal>
+  </section>
+)}
 
       <FAQ items={e.faqs} title="Event questions, answered." />
     </div>

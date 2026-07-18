@@ -1,5 +1,52 @@
 export const events = [
   {
+  slug: 'tandav-3-holi',
+  name: 'Organic Tandav 3.0 — Holi Festival',
+  tagline: 'Special Edition. The biggest Holi celebration in town.',
+  since: 'Concluded Edition — Holi 2025',
+  instagram: 'https://www.instagram.com/tandav2006/',
+  image: '/images/tandav-3-holi/poster-1.jpg',
+  accent: 'from-fuchsia-500 via-orange-500 to-yellow-500',
+  about:
+    'Organic Tandav 3.0 was our biggest Holi Special Edition — a full-day festival of colours, dance, music and masti at Vitthal Lawns, Hinjewadi. 5000+ celebrators, herbal gulal, rain dance, live DJ, Shiv Tandav & Lavani performances, Tom & Jerry characters, food stalls and a safe, secured campus. This edition is done — the next Tandav Holi is already in the works.',
+  highlights: [
+    'Shiv Tandav Dance',
+    'Tatya Vinchu Performance',
+    'Lavani Dance',
+    'Tom & Jerry Characters',
+    'Kids Games & Fun Zone',
+    'DJ & Rain Dance',
+    'Herbal Gulal & Thandai',
+    'Delicious Food Stalls',
+    'Safe & Secured Campus',
+    'No Stag Entry',
+  ],
+  venue: 'Vitthal Lawns, Laxmi Chowk, Hinjewadi, Pune',
+  contact: ['+91 99239 51535', '+91 81496 63995'],
+  email: 'jayganeshfilmsent@gmail.com',
+  gallery: [
+    '/images/tandav-3-holi/poster-1.jpg',
+    '/images/tandav-3-holi/poster-2.jpg',
+    '/images/tandav-3-holi/poster-3.jpg',
+    '/images/tandav-3-holi/poster-4.jpg',
+  ],
+  stats: [
+    { label: 'Footfall', value: '5,000+' },
+    { label: 'Entry', value: '₹199' },
+    { label: 'Main Attractions', value: '10+' },
+  ],
+  // NEW — flags this as a done edition
+  pastEdition: true,
+  nextEditionNote: 'Tandav Holi is an annual celebration — the next edition drops around Holi. Follow us to be the first to know.',
+  faqs: [
+    { q: 'Is this edition over?', a: 'Yes — Tandav 3.0 Holi Special Edition has concluded. Thank you to the 5000+ celebrators who made it unforgettable.' },
+    { q: 'When is the next Tandav Holi?', a: 'Tandav Holi is annual — the next edition drops around Holi. Follow @tandav2006 on Instagram or drop your details on the contact page to get notified.' },
+    { q: 'Was stag entry allowed?', a: 'No stag entry — couples, families and groups only, for a safer family-friendly celebration.' },
+    { q: 'Was the gulal safe?', a: 'Yes — 100% herbal, skin-friendly gulal was provided to all guests.' },
+  ],
+  sociablekitId: '25697952',
+},
+  {
     slug: 'tandav',
     name: 'Tandav Dance Competition',
     tagline: 'The battleground of India’s finest movers.',
@@ -36,29 +83,25 @@ export const events = [
       'Safe & Secure Environment',
       'Ample Parking & Premium Venue',
     ],
-    // NEW — upcoming event details (extracted from the poster)
-    isUpcoming: true,
+    isUpcoming: false, // set to true if you want it back on the hero
     date: '15th – 20th October 2026',
     dateShort: '15 – 20 OCT 2026',
     time: '7:00 PM Onwards',
     venue: 'Vittal Lawns, Laxmi Chowk, Hinjewadi, Pune – 57',
     contact: ['+91 99239 51535', '+91 81496 63995'],
     email: 'jayganeshfilmsent@gmail.com',
-    // NEW — 2x2 gallery on the event page
     gallery: [
       '/images/shubh-garba/poster-1.jpg',
       '/images/shubh-garba/poster-2.jpg',
       '/images/shubh-garba/poster-3.jpg',
       '/images/shubh-garba/shubh-garba.jpg',
     ],
-    // NEW — stats
     stats: [
       { label: 'Expected Footfall', value: '15,000+' },
       { label: 'Social Media Reach', value: '2,00,000+' },
       { label: 'WhatsApp Broadcast', value: '25,000+' },
       { label: 'Nights of Celebration', value: '6' },
     ],
-    // NEW — sponsorship info
     sponsorship: {
       headline: 'Be a part of Pune’s biggest Garba celebration!',
       subline: 'Sponsorship Packages — pick a tier that fits your brand.',
@@ -70,63 +113,16 @@ export const events = [
         'High Impact at a Cost-Effective Value',
       ],
       packages: [
-        {
-          tier: 'Title Sponsor',
-          price: '₹5,00,000',
-          accent: 'from-amber-500/40 to-yellow-600/20',
-          perks: [
-            'Event Naming Rights',
-            'Stage & Main Gate Branding',
-            'Logo on Posters, Banners & Tickets',
-            'LED Screen Branding',
-            'Social Media Promotion',
-            'VIP Passes (20)',
-            'Stall Space (Prime Location)',
-          ],
-        },
-        {
-          tier: 'Powered By Sponsor',
-          price: '₹2,50,000',
-          accent: 'from-fuchsia-500/30 to-purple-600/10',
-          perks: [
-            'Premium Logo Placement',
-            'Stage Side Branding',
-            'Social Media Mentions',
-            'Stall Space',
-            'VIP Passes (15)',
-          ],
-        },
-        {
-          tier: 'Gold Sponsor',
-          price: '₹1,00,000',
-          accent: 'from-yellow-500/30 to-amber-600/10',
-          perks: [
-            'Logo on Event Creatives',
-            'Standee & Banner Display',
-            'Stage Announcements',
-            '10 VIP Passes',
-          ],
-        },
-        {
-          tier: 'Silver Sponsor',
-          price: '₹50,000',
-          accent: 'from-slate-400/30 to-slate-600/10',
-          perks: [
-            'Logo on Sponsor Board',
-            'Social Media Mention',
-            '5 VIP Passes',
-          ],
-        },
-        {
-          tier: 'Associate Sponsor',
-          price: '₹25,000',
-          accent: 'from-orange-500/30 to-rose-600/10',
-          perks: [
-            'Logo on Sponsor Backdrop',
-            'Social Media Thank You Post',
-            '2 VIP Passes',
-          ],
-        },
+        { tier: 'Title Sponsor', price: '₹5,00,000', accent: 'from-amber-500/40 to-yellow-600/20',
+          perks: ['Event Naming Rights','Stage & Main Gate Branding','Logo on Posters, Banners & Tickets','LED Screen Branding','Social Media Promotion','VIP Passes (20)','Stall Space (Prime Location)'] },
+        { tier: 'Powered By Sponsor', price: '₹2,50,000', accent: 'from-fuchsia-500/30 to-purple-600/10',
+          perks: ['Premium Logo Placement','Stage Side Branding','Social Media Mentions','Stall Space','VIP Passes (15)'] },
+        { tier: 'Gold Sponsor', price: '₹1,00,000', accent: 'from-yellow-500/30 to-amber-600/10',
+          perks: ['Logo on Event Creatives','Standee & Banner Display','Stage Announcements','10 VIP Passes'] },
+        { tier: 'Silver Sponsor', price: '₹50,000', accent: 'from-slate-400/30 to-slate-600/10',
+          perks: ['Logo on Sponsor Board','Social Media Mention','5 VIP Passes'] },
+        { tier: 'Associate Sponsor', price: '₹25,000', accent: 'from-orange-500/30 to-rose-600/10',
+          perks: ['Logo on Sponsor Backdrop','Social Media Thank You Post','2 VIP Passes'] },
       ],
     },
     faqs: [
@@ -137,6 +133,7 @@ export const events = [
     ],
     sociablekitId: '25697958',
   },
+
   {
     slug: 'glamour-gateway',
     name: 'Glamour Gateway',
@@ -158,3 +155,6 @@ export const events = [
 ];
 
 export const getEvent = (slug) => events.find((e) => e.slug === slug);
+
+// NEW helper — returns the first event flagged as upcoming
+export const getUpcomingEvent = () => events.find((e) => e.isUpcoming);
