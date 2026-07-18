@@ -1,50 +1,53 @@
 export const awards = [
   {
-    title: 'Boogie Woogie Winner',
-    year: '1999',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Sony TV\'s iconic national dance stage — the win that started it all.',
+    title: 'Technikala 2025 — Judge, Token of Appreciation',
+    year: '2025',
+    image: '/images/awards/nicmar-technikala-2025.jpg',
+    desc:
+      'Presented by NICMAR University, Pune for gracious presence as a judge at Technikala 2025 (6–8 March 2025).',
   },
   {
-    title: 'Boogie Woogie Winner',
-    year: '2004',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Returned to Sony TV and lifted the Boogie Woogie trophy for the second time.',
+    title: 'Pimpri Chinchwad Gaurav Sanman',
+    year: '2025',
+    image: '/images/awards/pcmc-gaurav-sanman-2025.jpg',
+    desc:
+      'Civic honour presented by Pudhari (leading Marathi daily) at the hands of Hon. Shri Murlidhar Mohol — Union Minister of State, Ministry of Cooperation & Civil Aviation — recognising outstanding contribution to art and culture in Pimpri-Chinchwad through My Style Dance Studio.',
   },
   {
-    title: 'All India Multilingual Dance Winner',
-    year: '2005',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'A landmark national victory that crossed languages, cultures and dance styles.',
-  },
-  {
-    title: 'Dream Art Dance Competition — First Prize',
-    year: '2007',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Awarded the top prize for creative choreography and stage presence.',
-  },
-  {
-    title: 'Tandav Dance Competition — Founder',
-    year: 'Since 2007',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Founded and hosts Tandav every year — 3,000+ dancers from across Maharashtra.',
-  },
-  {
-    title: 'Jay Ganesh Films Entertainment Pvt. Ltd.',
-    year: '2017',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Founded the production banner to create opportunities in films, events and culture.',
-  },
-  {
-    title: 'Jeevan Gaurav (Lifetime Achievement) Award',
+    title: 'Jeevan Gaurav Puraskar (Lifetime Achievement)',
     year: '2019',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Honoured by the Pimpri-Chinchwad Municipal Corporation (PCMC) for his contribution to dance.',
+    image: '/images/awards/jeevan-gaurav-2019.jpg',
+    desc:
+      'Presented by Shivchhatrapati Pratishthan, Thergaon on the birth-anniversary of Hon. Shrirang alias Appa Barne (Maval Loksabha, PCMC) — honouring outstanding contribution in social, educational, art, sports & industry fields.',
+  },
+  {
+    title: 'MINERVA 16 — Token of Appreciation',
+    year: '2016',
+    image: '/images/awards/isbm-minerva-16.jpg',
+    desc:
+      'Awarded by ISB&M College of Commerce, Pune during MINERVA 16 for outstanding choreography and stage performance.',
+  },
+  {
+    title: 'Walwad Shivjanmotsav — Sanman Chinh',
+    year: '2018',
+    image: '/images/awards/shivjanmotsav-2018.jpg',
+    desc:
+      'Honour Sign awarded by Vichaarmanch Pariwar, Walwad (Ta. Bhum, Ji. Osmanabad) at Walwad Shivjanmotsav 2018 for cultural contribution.',
+  },
+  {
+    title: 'Nrutya Spardha — Pratham Kramank (First Rank)',
+    year: '2011',
+    image: '/images/awards/nrutya-spardha-2011.jpg',
+    desc:
+      'First rank in the Kala va Krida Spardha (Dance Competition) organised by Shivchhatrapati Pratishthan, Thergaon on 16 February 2011.',
   },
   {
     title: '200+ Awards & Honours',
     year: 'Since 1999',
-    image: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784183438/award_fsh1ie.png',
-    desc: 'Over two decades of national and regional recognition for excellence in dance.',
+    id: 'award_fsh1ie',
+    image:
+      '/images/awards/mukesh-rudra.jpg',
+    desc:
+      'Over two decades of national and regional recognition for excellence in dance, choreography and cultural contribution.',
   },
 ];
