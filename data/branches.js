@@ -8,7 +8,7 @@ export const branches = [
     phone: '9923951535',
     instagram: 'https://www.instagram.com/my_styledstudio_/',
     maps: 'https://maps.app.goo.gl/W7B6tTnHZmRTQy649',
-    mapsEmbed: 'https://www.google.com/maps?q=Akshay+Plaza+Hinjewadi+Phase+1+Pune&output=embed',
+    mapsEmbed: 'https://maps.app.goo.gl/W7B6tTnHZmRTQy649',
     image: '/images/my-style-studio.jpg',
     poster: '/images/hinjewadi-poster-2.jpg',
     accent: 'from-amber-400 via-rose-500 to-fuchsia-600',
