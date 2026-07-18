@@ -31,7 +31,7 @@ export default function BranchesPage() {
           <p className="mt-6 text-lg text-muted-foreground">Four locations, one philosophy — world-class training, community-first culture and stages that make you feel unstoppable.</p>
         </div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
           {branches.map((b, i) => (
             <div key={b.slug} className="group relative overflow-hidden rounded-3xl border border-border bg-card/40 hover-lift">
               <Link href={`/branches/${b.slug}`} >

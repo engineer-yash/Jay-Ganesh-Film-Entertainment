@@ -103,7 +103,7 @@ export default function HomePage() {
             </div>
             <Link href="/branches" className="inline-flex items-center gap-2 text-sm hover:text-primary transition">See all branches <ArrowRight className="h-4 w-4" /></Link>
           </div></Reveal>
-          <Stagger className="grid md:grid-cols-2 gap-6">
+          <Stagger className="grid md:grid-cols-3 gap-6">
             {branches.map((b, i) => (
               <StaggerItem key={b.slug} y={50}>
                 <Link href={`/branches/${b.slug}`} className="group relative overflow-hidden rounded-3xl ring-1 ring-border aspect-[16/11] hover-lift block">
