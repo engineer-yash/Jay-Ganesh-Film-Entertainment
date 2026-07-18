@@ -52,7 +52,7 @@ export const branches = [
     phone: '',
     instagram: 'https://www.instagram.com/my_style_dance_studio_punawale/',
     maps: 'https://maps.app.goo.gl/ea9YsJfQTBwL1rhJ9',
-    mapsEmbed: 'https://www.google.com/maps?q=Latitude+Mall+Punawale+Pune&output=embed',
+    mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.2048913991157!2d73.72924897428967!3d18.623910666011234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbffd378b3cb%3A0x74a6ad1115148470!2sMy%20style%20dance%20studio!5e1!3m2!1sen!2sin!4v1784374271262!5m2!1sen!2sin',
     image: '/images/my-style-studio.jpg',
     poster: '/images/hinjewadi-poster-2.jpg',
     accent: 'from-fuchsia-500 via-purple-600 to-indigo-700',
@@ -70,7 +70,7 @@ export const branches = [
     owner: 'Mukesh Chaudhari',
     instagram: 'https://www.instagram.com/shubhdancecompany/',
     maps: 'https://maps.app.goo.gl/h4GRmZY6NjnbisTs9',
-    mapsEmbed: 'https://www.google.com/maps?q=Grand+Highstreet+Mall+Hinjewadi+Pune&output=embed',
+    mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.765333832155!2d73.7254531!3d18.5939728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb7ee0a7bcaf%3A0xa3685e05cec7efaa!2sGrand%20Highstreet%20-%20Shopping%20Mall%20in%20Hinjawadi!5e1!3m2!1sen!2sin!4v1784374340432!5m2!1sen!2sin',
     image: '/images/shubh-dance.jpg',
     poster: '/images/shubh-dance.jpg',
     accent: 'from-yellow-400 via-orange-500 to-red-600',
@@ -93,7 +93,7 @@ export const branches = [
     phone: '',
     instagram: 'https://www.instagram.com/mystyledanceschool/',
     maps: 'https://maps.app.goo.gl/ir5f3LN5nCv3MMMu6',
-    mapsEmbed: 'https://www.google.com/maps?q=Pawar+Market+Tathawade+Pune&output=embed',
+    mapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.462489308637!2d73.7451134!3d18.610156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb8e9f2a637d%3A0x1fbaf42ffdce3ea0!2sMy%20style%20dance%20school!5e1!3m2!1sen!2sin!4v1784374412286!5m2!1sen!2sin',
     image: '/images/my-style-studio.jpg',
     poster: '/images/my-style-studio.jpg',
     accent: 'from-emerald-400 via-teal-500 to-cyan-600',
@@ -110,9 +110,9 @@ export const branches = [
   phone: '8149663995',
   officeTime: '11 AM – 10 PM',
   instagram: '',
-  maps: 'https://maps.app.goo.gl/h4GRmZY6NjnbisTs9',
+  maps: 'https://maps.app.goo.gl/W7B6tTnHZmRTQy649',
   mapsEmbed:
-    'https://www.google.com/maps?q=Grand+Highstreet+Mall+Hinjewadi+Phase+1+Pune&output=embed',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.8395864041304!2d73.73574407428886!3d18.590002867051453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc40101777b%3A0xd4ac8bb448d88e9b!2sMY%20STYLE%20DANCE%20STUDIO!5e1!3m2!1sen!2sin!4v1784374018221!5m2!1sen!2sin',
   image: '/images/shubh-studio-logo.jpg',      // OUTSIDE — logo thumbnail
   poster: '/images/shubh-studio-poster.jpg',   // INSIDE — full white poster
   accent: 'from-yellow-400 via-orange-500 to-red-600',
