@@ -64,7 +64,7 @@ export default function BranchesPage() {
                 </div>
                 <div className="mt-6 flex items-center gap-3">
                   <Link href={`/branches/${b.slug}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition">
-                    Explore studio <ArrowRight className="h-4 w-4" />
+                    Explore <ArrowRight className="h-4 w-4" />
                   </Link>
                   <a href={b.maps} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border hover:border-primary hover:text-primary transition text-sm">
                     <MapPin className="h-4 w-4" /> Directions
