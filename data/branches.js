@@ -106,7 +106,7 @@ export const branches = [
   name: 'Shubh Studio',
   tag: 'Hinjewadi Phase 1',
   tagline: 'Cinematic Content Creation · Record & Podcast',
-  address: 'Grand Highstreet Mall, 3rd Floor, Hinjewadi Phase 1, Pune',
+  address: 'Akshay Plaza, 1st Floor, Near SBI Bank, Rajiv Gandhi Infotech Park, Phase 1, Hinjewadi, Pune 411057',
   phone: '8149663995',
   officeTime: '11 AM – 10 PM',
   instagram: '',
