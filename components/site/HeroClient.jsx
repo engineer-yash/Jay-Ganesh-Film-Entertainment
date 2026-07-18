@@ -20,7 +20,7 @@ export default function HeroClient() {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center pt-24 overflow-hidden spotlight">
       <motion.div style={{ y, scale, opacity }} className="absolute inset-0 -z-10">
-        <Image src="/images/secondary.png" alt="" fill priority className="object-cover object-center opacity-30" />
+        <Image src="/images/back-logo.jpg" alt="" fill priority className="object-cover object-center opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/90 to-background" />
       </motion.div>
 
