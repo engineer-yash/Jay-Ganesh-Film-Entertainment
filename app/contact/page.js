@@ -128,7 +128,17 @@ export default function ContactPage() {
             </div>
           </Reveal>
         </div>
-
+        <div className="lg:col-span-6">
+          <div className="p-8 rounded-3xl border border-border bg-card/40 backdrop-blur space-y-6">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold">Join Our Studio</h2>
+              <p className="text-white/60 mt-2">
+                Fill the form and we'll receive it on WhatsApp instantly.
+              </p>
+            </div>
+            <JoinStudioForm studioName="My Style Dance Studio" branchLabel="Hinjewadi Phase 1" />
+          </div>
+        </div>
         {/* <div className="lg:col-span-6">
           <motion.form onSubmit={submit} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="p-8 rounded-3xl border border-border bg-card/40 backdrop-blur space-y-4">
             <div className="grid sm:grid-cols-2 gap-4">
@@ -160,20 +170,6 @@ export default function ContactPage() {
             </button>
           </motion.form>
         </div> */}
-      </section>
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold">Join Our Studio</h2>
-            <p className="text-white/60 mt-2">
-              Fill the form and we'll receive it on WhatsApp instantly.
-            </p>
-          </div>
-          <JoinStudioForm
-            studioName="My Style Dance Studio"
-            branchLabel="Hinjewadi Phase 1"
-          />
-        </div>
       </section>
 
       <section className="mt-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
