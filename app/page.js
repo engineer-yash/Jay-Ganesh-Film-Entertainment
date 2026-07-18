@@ -133,11 +133,11 @@ export default function HomePage() {
           <Reveal><div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-primary">Signature Events</div>
-              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Three stages. <span className="text-gradient-gold">Unforgettable nights.</span></h2>
+              <h2 className="font-display text-4xl md:text-6xl mt-3 leading-tight">Four stages. <span className="text-gradient-gold">Unforgettable nights.</span></h2>
             </div>
             <Link href="/events" className="inline-flex items-center gap-2 text-sm hover:text-primary transition">All events <ArrowRight className="h-4 w-4" /></Link>
           </div></Reveal>
-          <Stagger className="grid md:grid-cols-3 gap-6">
+          <Stagger className="grid md:grid-cols-4 gap-6">
             {events.map((e) => (
               <StaggerItem key={e.slug} y={60}>
                 <Link href={`/events/${e.slug}`} className="group relative aspect-[3/4] overflow-hidden rounded-3xl ring-1 ring-border hover-lift block">
