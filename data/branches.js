@@ -101,6 +101,59 @@ export const branches = [
     classes: ['Bollywood', 'Kids Dance', 'Kathak', 'Fitness', 'Workout', 'Guitar'],
     sociablekitId: '25697973',
   },
+  {
+  slug: 'shubh-studio',
+  name: 'Shubh Studio',
+  tag: 'Hinjewadi Phase 1',
+  tagline: 'Cinematic Content Creation · Record & Podcast',
+  address: 'Grand Highstreet Mall, 3rd Floor, Hinjewadi Phase 1, Pune',
+  phone: '8149663995',
+  officeTime: '11 AM – 10 PM',
+  instagram: '',
+  maps: 'https://maps.app.goo.gl/h4GRmZY6NjnbisTs9',
+  mapsEmbed:
+    'https://www.google.com/maps?q=Grand+Highstreet+Mall+Hinjewadi+Phase+1+Pune&output=embed',
+  image: '/images/shubh-studio-logo.png',      // OUTSIDE — logo thumbnail
+  poster: '/images/shubh-studio-poster.jpg',   // INSIDE — full white poster
+  accent: 'from-yellow-400 via-orange-500 to-red-600',
+  highlights: [
+    'Reels Shoot',
+    'Podcast Shoot',
+    'Model Shoot',
+    'Outdoor Shoot',
+    'Dance Reel Shoot',
+    'Function Shoot',
+  ],
+  classes: [
+    'Reels Shoot',
+    'Podcast Shoot',
+    'Dance Reel Shoot',
+    'Outdoor Shoot',
+    'Other Function Shoot',
+    'Model Shoot',
+  ],
+  services: [
+    { name: 'Reel Shoot', price: '₹2,000' },
+    {
+      name: 'Model Shoot',
+      price: '₹6,000',
+      includes: 'Studio Photoshoot + Professional Model Photoshoot + 2 Reels Shoot',
+    },
+    { name: 'Podcast Shoot', price: 'Enquire' },
+    { name: 'Dance Reel Shoot', price: 'Enquire' },
+    { name: 'Outdoor Shoot', price: 'Enquire' },
+    { name: 'Other Function Shoot', price: 'Enquire' },
+  ],
+  features: [
+    'Professional Equipment',
+    'Creative Concepts',
+    'Expert Team',
+    'On-Time Delivery',
+    'Premium Quality',
+  ],
+  tagline_alt: 'We don\'t just shoot, we create impact.',
+  sociablekitId: '',
+},
 ];
 
 export const getBranch = (slug) => branches.find((b) => b.slug === slug);
