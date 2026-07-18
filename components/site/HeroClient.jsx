@@ -24,8 +24,8 @@ export default function HeroClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/90 to-background" />
       </motion.div>
 
-      <motion.div aria-hidden animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 60, ease: 'linear' }} className="absolute top-24 -left-32 h-96 w-96 rounded-full border border-primary/10 pointer-events-none" />
-      <motion.div aria-hidden animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 80, ease: 'linear' }} className="absolute bottom-10 -right-40 h-[500px] w-[500px] rounded-full border border-fuchsia-500/10 pointer-events-none" />
+      {/* <motion.div aria-hidden animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 60, ease: 'linear' }} className="absolute top-24 -left-32 h-96 w-96 rounded-full border border-primary/10 pointer-events-none" />
+      <motion.div aria-hidden animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 80, ease: 'linear' }} className="absolute bottom-10 -right-40 h-[500px] w-[500px] rounded-full border border-fuchsia-500/10 pointer-events-none" /> */}
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center pt-2 pb-20 relative">
         {/* LEFT — unchanged */}
@@ -154,12 +154,12 @@ export default function HeroClient() {
         </div>
       </div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.8 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-muted-foreground pointer-events-none"
-      >
+      > */}
         <span>Scroll</span>
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }} className="h-6 w-px bg-gradient-to-b from-primary to-transparent" />
       </motion.div>
