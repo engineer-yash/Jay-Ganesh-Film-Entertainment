@@ -12,7 +12,7 @@ export const metadata = {
   alternates: { canonical: '/branches' },
   openGraph: {
     title: 'Our Dance Studios in Pune',
-    description: 'Four premium dance studios. One philosophy.',
+    description: 'Premium dance studios. One philosophy.',
     url: '/branches',
     images: ['/images/my-style-studio.jpg'],
   },
@@ -28,7 +28,7 @@ export default function BranchesPage() {
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.3em] text-primary">Our Studios</div>
           <h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Find your <span className="text-gradient-gold">stage</span> in Pune.</h1>
-          <p className="mt-6 text-lg text-muted-foreground">Four locations, one philosophy — world-class training, community-first culture and stages that make you feel unstoppable.</p>
+          <p className="mt-6 text-lg text-muted-foreground">Multiple locations, one philosophy — world-class training, community-first culture and stages that make you feel unstoppable.</p>
         </div>
 
         <div className="mt-10 grid md:grid-cols-3 gap-6">

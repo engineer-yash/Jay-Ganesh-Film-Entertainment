@@ -22,7 +22,7 @@ export default function EventsPage() {
       <section className="mt-8 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <Reveal><div className="text-xs uppercase tracking-[0.3em] text-primary">Signature Events</div></Reveal>
-          <Reveal delay={0.1}><h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Four stages. <span className="text-gradient-gold">Unforgettable nights.</span></h1></Reveal>
+          <Reveal delay={0.1}><h1 className="font-display text-5xl md:text-7xl mt-4 leading-[1.02]">Five stages. <span className="text-gradient-gold">Unforgettable nights.</span></h1></Reveal>
           <Reveal delay={0.2}><p className="mt-6 text-lg text-muted-foreground">From dance battles to Navratri nights to fashion runways — our events bring together India’s finest performers, designers and dreamers.</p></Reveal>
         </div>
 
