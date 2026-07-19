@@ -1,5 +1,5 @@
 export const galleryImages = [
-  { src: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784180577/Just_obsessed_with_QeherI_m_.._viral_post_trending_tpgvge.jpg', category: 'Dance', title: 'Bollywood Fire' },
+  { src: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784180577/Just_obsessed_with_QeherI_m_.._viral_post_trending_tpgvge.jpg', category: 'Dance', title: 'Qeher by Snehal' },
   { src: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784180577/Just_obsessed_with_QeherI_m_.._viral_post_trending_tpgvge.jpg', category: 'Dance', title: 'Move & Shine' },
   { src: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784180577/Just_obsessed_with_QeherI_m_.._viral_post_trending_tpgvge.jpg', category: 'Dance', title: 'Hip-Hop Battle' },
   { src: 'https://res.cloudinary.com/dkinrfyq7/image/upload/v1784180577/Just_obsessed_with_QeherI_m_.._viral_post_trending_tpgvge.jpg', category: 'Studio', title: 'Hinjewadi Floor' },
