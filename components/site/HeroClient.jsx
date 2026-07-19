@@ -68,10 +68,10 @@ export default function HeroClient() {
             </Link>
           </motion.div>
 
-          <div className="mt-14 grid grid-cols-4 gap-6 max-w-lg">
+          <div className="mt-14 grid grid-cols-4 gap-3 sm:gap-6 max-w-lg">
             {founder.stats.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.2 + i * 0.1 }}>
-                <div className="font-display text-3xl md:text-4xl text-gradient-gold">{s.number}</div>
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl text-gradient-gold">{s.number}</div>
                 <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground leading-tight">{s.label}</div>
               </motion.div>
             ))}
@@ -128,7 +128,7 @@ export default function HeroClient() {
               <div className="mt-5 grid grid-cols-3 gap-3">
                 {upcoming.stats.slice(0, 3).map((s) => (
                   <div key={s.label} className="rounded-xl border border-border bg-card/40 px-3 py-2 text-center">
-                    <div className="font-display text-lg text-gradient-gold leading-none">{s.value}</div>
+                    <div className="font-display text-sm md:text-lg text-gradient-gold leading-none">{s.value}</div>
                     <div className="mt-1 text-[9px] uppercase tracking-[0.15em] text-muted-foreground leading-tight">{s.label}</div>
                   </div>
                 ))}
